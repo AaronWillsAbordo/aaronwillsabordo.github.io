@@ -5,6 +5,8 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  animation: App-logo-spin infinite 20s linear;
+  transform: rotate(360deg); /* GPU-accelerated */
 }
 
 @media (prefers-reduced-motion: no-preference) {
