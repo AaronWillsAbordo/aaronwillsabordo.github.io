@@ -1,8 +1,15 @@
+:root {
+  --cream:       #FCFBF7;
+  --white:       #ffffff;
+  --darkFont:   #323232;
+  --darkFont75: #323232BF;
+  --darkFont50: #32323280;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  overflow-x: hidden; /* Add this to ensure there's no horizontal scrolling */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +17,83 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+p {
+  color: var(--Dark-font, #323232);
+  font-family: "Segoe UI";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+}
+
+strong {
+  color: var(--Dark-font, #323232);
+  font-family: "Segoe UI";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+h1 {
+  color: var(--Dark-font, #323232);
+  font-family: "Segoe UI";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.layoutCream {
+  background-color: var(--cream, #FCFBF7);
+  /*width: 100vw;   Full viewport width */
+  width: 100%;
+  height: 700px; /* Fixed height for layout */
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  
+  /* Flexbox to center content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  text-align: center; /* Ensures text is centered */
+}
+
+.layoutWhite {
+  background-color: var(--white, #ffffff);
+  /*width: 100vw;   Full viewport width */
+  width: 100%;
+  height: 700px; /* Fixed height for layout */
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0;
+  
+  /* Flexbox to center content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  text-align: center; /* Ensures text is centered */
+}
+
+.layout-sidebyside {
+  display: flex;
+  align-items: center; /* Aligns the text vertically with the image */
+  gap: 10px; /* Adds some space between the image and the text */
+}
+
+.layout-sidebyside img {
+  width: 24px; /* Adjust the image size as needed */
+  height: 24px;
+}
+
+.layout-sidebyside p {
+  margin: 0; /* Removes extra margin on the <p> tag */
+  font-size: 16px; /* Adjust font size as needed */
+  color: var(--darkFont, #323232); /* Use your theme color */
 }
