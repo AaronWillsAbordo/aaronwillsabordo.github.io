@@ -1,6 +1,7 @@
 export const dataLinks = [
     {
-        urlName: 'LinkedIn',
-        urlLink: '#'
+        urlName: 'mapsGoogleLink',
+        urlLink: 'https://maps.app.goo.gl/qSTUwhN2YX8UGtKj6'
     }
+
 ]

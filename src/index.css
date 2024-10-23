@@ -8,7 +8,7 @@
 
 body {
   margin: 0;
-  overflow-x: hidden; /* Add this to ensure there's no horizontal scrolling */
+  overflow-x: hidden;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -49,9 +49,8 @@ h1 {
 
 .layoutCream {
   background-color: var(--cream, #FCFBF7);
-  /*width: 100vw;   Full viewport width */
   width: 100%;
-  height: 700px; /* Fixed height for layout */
+  height: 700px;
   padding: 20px;
   box-sizing: border-box;
   margin: 0 auto;
@@ -59,16 +58,15 @@ h1 {
   /* Flexbox to center content */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-  text-align: center; /* Ensures text is centered */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .layoutWhite {
   background-color: var(--white, #ffffff);
-  /*width: 100vw;   Full viewport width */
   width: 100%;
-  height: 700px; /* Fixed height for layout */
+  height: 700px;
   padding: 20px;
   box-sizing: border-box;
   margin: 0;
@@ -76,24 +74,59 @@ h1 {
   /* Flexbox to center content */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-  text-align: center; /* Ensures text is centered */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .layout-sidebyside {
   display: flex;
-  align-items: center; /* Aligns the text vertically with the image */
-  gap: 10px; /* Adds some space between the image and the text */
+  align-items: left;
+  gap: 30px;
+  text-decoration: none;
+}
+
+.layout-sidebyside a {
+  cursor: pointer;
+  text-decoration: none; /* No underline on link */
 }
 
 .layout-sidebyside img {
-  width: 24px; /* Adjust the image size as needed */
+  width: 30px;
+  height: 30px;
+  transition: opacity 0.3s ease; /* Smooth transition for hover */
+}
+
+.layout-sidebyside img:hover {
+  opacity: 0.8;
+}
+
+.location-info {
+  display: flex;
+  align-items: left;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.location-info img {
+  width: 24px;
   height: 24px;
 }
 
-.layout-sidebyside p {
-  margin: 0; /* Removes extra margin on the <p> tag */
-  font-size: 16px; /* Adjust font size as needed */
-  color: var(--darkFont, #323232); /* Use your theme color */
+.location-info p {
+  margin: 0;
+  font-size: 16px;
+  color: var(--darkFont, #323232);
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.location-info:hover {
+  opacity: 0.8;
 }
