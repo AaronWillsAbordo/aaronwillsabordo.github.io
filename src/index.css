@@ -79,9 +79,20 @@ h1 {
   text-align: center;
 }
 
+.content-box {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  width: 700px;
+  margin: 0 auto; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  background-color: var(--darkFont50); 
+}
+
 .layout-sidebyside {
   display: flex;
   align-items: left;
+  /* justify-content: space-between; */
   gap: 30px;
   text-decoration: none;
 }
