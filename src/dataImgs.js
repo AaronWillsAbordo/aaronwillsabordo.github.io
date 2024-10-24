@@ -13,4 +13,8 @@ export const dataImgs = [
         imgSource: `${process.env.PUBLIC_URL}/img/devicon_linkedin.svg`,
         imgUrl: "#"
     },
+    {
+        imgName: 'profile',
+        imgSource: `${process.env.PUBLIC_URL}/img/profile.jpg`
+    },
 ]
