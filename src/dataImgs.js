@@ -1,20 +1,24 @@
 export const dataImgs = [
     {
-        imgName: 'location',
-        imgSource: `${process.env.PUBLIC_URL}/img/location.svg`
+        name: 'location',
+        source: `${process.env.PUBLIC_URL}/img/location.svg`
     },
     {
-        imgName: 'github',
-        imgSource: `${process.env.PUBLIC_URL}/img/devicon_github.svg`,
-        imgUrl: "#"
+        name: 'github',
+        source: `${process.env.PUBLIC_URL}/img/devicon_github.svg`,
+        url: "#"
     },
     {
-        imgName: 'linkedin',
-        imgSource: `${process.env.PUBLIC_URL}/img/devicon_linkedin.svg`,
-        imgUrl: "#"
+        name: 'linkedin',
+        source: `${process.env.PUBLIC_URL}/img/devicon_linkedin.svg`,
+        url: "#"
     },
     {
-        imgName: 'profile',
-        imgSource: `${process.env.PUBLIC_URL}/img/profile.jpg`
+        name: 'profile',
+        source: `${process.env.PUBLIC_URL}/img/profile.jpg`
+    },
+    {
+        name: 'arrowDown',
+        source: `${process.env.PUBLIC_URL}/img/arrowDown.svg`
     },
 ]

@@ -5,14 +5,10 @@
 }
 
 .content-box {
-    /* border: 1px solid #ccc; */
     padding: 20px;
-    /* border-radius: 8px; */
     width: 800px;
     max-width: 800;
-    /* min-width: 800; */
     margin: 0 auto; 
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  */
     background-color: transparent; 
     align-items: left;
 }
@@ -20,20 +16,19 @@
 .layout-sidebyside {
     display: flex;
     align-items: left;
-    /* justify-content: space-between; */
     gap: 30px;
     text-decoration: none;
 }
   
 .layout-sidebyside a {
     cursor: pointer;
-    text-decoration: none; /* No underline on link */
+    text-decoration: none;
 }
   
 .layout-sidebyside img {
     width: 30px;
     height: 30px;
-    transition: opacity 0.3s ease; /* Smooth transition for hover */
+    transition: opacity 0.3s ease;
 }
   
 .layout-sidebyside img:hover {
@@ -41,7 +36,7 @@
 }
 
 .location-info {
-    display: block; /* Ensures the clickable area is only around the content */
+    display: block;
     text-decoration: none;
     color: inherit;
     margin-bottom: 20px;
@@ -77,8 +72,8 @@
     flex-basis: 300px;
     display: flex;
     justify-content: flex-end;
-    position: relative; /* To position the rectangle relative to this section */
-    align-items: center; /* Center the image within the image-section */
+    position: relative;
+    align-items: center;
 }
 
 .profile-image {
@@ -100,3 +95,34 @@
     left: 110px;
     z-index: 0;
 }
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translate(-50%, 0);
+    }
+    50% {
+        transform: translate(-50%, -10px);
+    }
+}
+
+.scroll-arrow {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: var(--darkFont, #323232);
+    z-index: 10;
+    animation: bounce 1s infinite;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+
+.scroll-arrow.hidden {
+    opacity: 0;
+}
+
+/* .scroll-arrow:hover {
+    opacity: 0.8;
+} */
+
