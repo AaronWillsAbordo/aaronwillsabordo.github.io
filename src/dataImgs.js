@@ -21,4 +21,8 @@ export const dataImgs = [
         name: 'arrowDown',
         source: `${process.env.PUBLIC_URL}/img/arrowDown.svg`
     },
+    {
+        name: 'vishay',
+        source: `${process.env.PUBLIC_URL}/img/logo-vishay.png`
+    },
 ]

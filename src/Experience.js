@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {data} from './data';
 import './Experience.css';
 
 export default function Experience() {
@@ -7,18 +7,38 @@ export default function Experience() {
         <div className="layoutCream">
             <title>Experience</title>
             <h2>Here is a quick summary of my most recent experiences:</h2>
-            <div className="experience-container">
-                <div className="experience-column-left">
-                    <img src="path_to_image.jpg" alt="Experience Icon" />
-                </div>
-                <div className="experience-column-right">
-                    <div>
-                        <h3>Position Title</h3>
-                        <p>Company Name</p>
-                        <p>Brief description of responsibilities and achievements.</p>
+
+            {data.map((company, companyIndex) => (
+                <div key={companyIndex} className="experience-container">
+                    <div className="experience-column-left">
+                        <img src={company.source} alt='companyLogo' />
+                    </div>
+                    <div className="experience-column-right">
+                        <h4>{company.company}</h4> {/* Company name appears once */}
+                        
+                        {company.roles.map((role, roleIndex) => (
+                            <div key={roleIndex}>
+                                {/* Flexbox container to align title and date side by side */}
+                                <div className="role-header">
+                                    <h1>{role.title}</h1> {/* Role title */}
+                                    <h5>{role.date}</h5> {/* Role date */}
+                                </div>
+
+                                <ul>
+                                    {role.descriptions.map((description, index) => (
+                                        <li key={index} dangerouslySetInnerHTML={{ __html: description }}></li>
+                                    ))}
+                                </ul>
+                                <div className="skills-container">
+                                    {role.skills.map((skill, index) => (
+                                        <span key={index} className="skill-box">{skill}</span>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
-            </div>
+            ))}
         </div>
     );
 }

@@ -31,14 +31,14 @@ export default function Profile() {
             <div className="profile-content">
                 <div className="content-box">
                     <h1 style={{ textAlign: 'left' }}>Hi, I'm Aaron 👋</h1>
-                    <p>
+                    <h3>
                         I’m a <strong>Software Engineer</strong> with expertise in <strong>Python</strong>
                         , <strong>.NET</strong>, <strong>React</strong>, and <strong>data analytics</strong>, 
                         dedicated to building efficient, scalable solutions. 
                         I’m also passionate about creating impactful software 
                         and exploring <strong>AI technologies</strong>. Eager to contribute to a challenging 
                         and collaborative environment where I can continuously learn and grow.
-                    </p>
+                    </h3>
                     
                     <div className="location-content">
                         <a href={linkMap.url} target="_blank" rel="noopener noreferrer" className="location-info">
