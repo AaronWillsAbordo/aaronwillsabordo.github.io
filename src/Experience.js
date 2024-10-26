@@ -14,14 +14,13 @@ export default function Experience() {
                         <img src={company.source} alt='companyLogo' />
                     </div>
                     <div className="experience-column-right">
-                        <h4>{company.company}</h4> {/* Company name appears once */}
+                        <h4>{company.company}</h4>
                         
                         {company.roles.map((role, roleIndex) => (
                             <div key={roleIndex}>
-                                {/* Flexbox container to align title and date side by side */}
                                 <div className="role-header">
-                                    <h1>{role.title}</h1> {/* Role title */}
-                                    <h5>{role.date}</h5> {/* Role date */}
+                                    <h1>{role.title}</h1>
+                                    <h5>{role.date}</h5>
                                 </div>
 
                                 <ul>
@@ -29,6 +28,7 @@ export default function Experience() {
                                         <li key={index} dangerouslySetInnerHTML={{ __html: description }}></li>
                                     ))}
                                 </ul>
+                                
                                 <div className="skills-container">
                                     {role.skills.map((skill, index) => (
                                         <span key={index} className="skill-box">{skill}</span>

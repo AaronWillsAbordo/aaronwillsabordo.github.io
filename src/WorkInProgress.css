@@ -1,0 +1,27 @@
+.work-in-progress-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.gear-image {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    animation: spin 10s linear infinite; /* Adjust the time here for slower or faster spin */
+    z-index: 1; /* Send it behind the work-in-progress image */
+}
+
+.work-in-progress-image {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    z-index: 2;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

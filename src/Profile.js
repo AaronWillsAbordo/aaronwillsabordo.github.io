@@ -30,7 +30,7 @@ export default function Profile() {
         <div className="layoutWhite layoutWhite--profile">
             <div className="profile-content">
                 <div className="content-box">
-                    <h1 style={{ textAlign: 'left' }}>Hi, I'm Aaron 👋</h1>
+                    <h1 style={{ paddingBottom: '20px', fontSize: '32px' }}>Hi, I'm Aaron 👋</h1>
                     <h3>
                         I’m a <strong>Software Engineer</strong> with expertise in <strong>Python</strong>
                         , <strong>.NET</strong>, <strong>React</strong>, and <strong>data analytics</strong>, 

@@ -8,6 +8,7 @@
     width: 854px;
     /* height: 541px; */
     padding: 20px;
+    margin-bottom: 20px;
 }
 
 .experience-column-left {
@@ -57,6 +58,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
 }
 

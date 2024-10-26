@@ -22,7 +22,11 @@ export const dataImgs = [
         source: `${process.env.PUBLIC_URL}/img/arrowDown.svg`
     },
     {
-        name: 'vishay',
-        source: `${process.env.PUBLIC_URL}/img/logo-vishay.png`
+        name: 'workInProgress',
+        source: `${process.env.PUBLIC_URL}/img/work-in-progress.png`
+    },
+    {
+        name: 'gear',
+        source: `${process.env.PUBLIC_URL}/img/gear.png`
     },
 ]

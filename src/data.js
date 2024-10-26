@@ -49,5 +49,24 @@ export const data = [
                 skills: ['3D Visualization', '3D Mesh Manipulation', 'Python', 'Data Analysis', 'FastAPI', 'ThreeJS']
             }
         ] 
+    },
+    {
+        id: 'vishay',
+        company: 'Vishay Philippines Inc.',
+        source: `${process.env.PUBLIC_URL}/img/logo-vishay.png`,
+        roles: [
+            {
+                title: 'OJT Failure Analysis Modules Quality',
+                date: 'Feb 2019 - Dec 2019',
+                descriptions: [
+                    `<strong>Performed comprehensive failure analysis of 
+                    semiconductor devices</strong> utilizing various techniques.`,
+
+                    `<strong>Identified root causes of failures</strong>, leading to 
+                    significant improvements in device yield and product quality.` 
+                ],
+                skills: ['Failure Analysis']
+            }
+        ]
     }
 ]
