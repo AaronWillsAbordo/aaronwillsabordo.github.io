@@ -3,23 +3,22 @@
     flex-direction: column;
     gap: 50px;
     width: 850px;
-    margin: 0 auto;
     text-align: center;
+    justify-items: center;
 }
 
 .skills-row {
     display: grid;
-    /* grid-template-columns: repeat(5, 1fr); */
-    /* grid-template-columns: auto auto auto auto; */
     grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-    gap: 50px 100px;
+    grid-gap: 50px 100px;
     justify-items: center;
+    align-items: center;
 }
 
 .skills-row.last-row {
-    /* grid-template-columns: repeat(3, 1fr); */
-    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-    justify-items: center;
+    display: grid;
+    grid-template-columns: 50px 130px 50px;
+    justify-content: center;
 }
 
 .skill-item {
