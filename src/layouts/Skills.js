@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import dataSkills from '../data/dataSkills.json'; // default import
 import './Skills.css';
 
-export default function Skills() {
+const Skills = forwardRef((props, ref) => {
     const firstRow = dataSkills.skills.slice(0, 5);
     const secondRow = dataSkills.skills.slice(5, 10);
     const thirdRow = dataSkills.skills.slice(10);
 
     return (
-        <div className='layoutWhite'>
+        <section ref={ref} className='layoutWhite'>
             <title>Skills</title>
             <h2>The skills, tools, and technologies I am good at:</h2>
 
@@ -24,6 +24,8 @@ export default function Skills() {
                     </div>
                 ))}
             </div>
-        </div>
+        </section>
     );
-}
+});
+
+export default Skills;

@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import {data} from '../data/data';
 import './Experience.css';
 
-export default function Experience() {
+const Experience = forwardRef((props, ref) => {
     return (
-        <div className="layoutCream">
+        <section ref={ref} className="layoutCream">
             <title>Experience</title>
             <h2>Here is a quick summary of my most recent experiences:</h2>
 
@@ -39,6 +39,8 @@ export default function Experience() {
                     </div>
                 </div>
             ))}
-        </div>
+        </section>
     );
-}
+});
+
+export default Experience;

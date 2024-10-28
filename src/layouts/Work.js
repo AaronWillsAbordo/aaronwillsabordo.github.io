@@ -4,9 +4,9 @@ import React from 'react';
 
 export default function Work() {
     return (
-        <div className="layoutCream">
+        <section className="layoutCream">
             <title>Work</title>
             <h2> Some of the noteworthy projects I have built: </h2>
-        </div>
+        </section>
     );
 }

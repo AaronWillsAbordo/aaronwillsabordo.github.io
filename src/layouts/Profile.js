@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, forwardRef } from 'react';
 import {dataImgs} from '../data/dataImgs';
 import {dataLinks} from '../data/dataLinks';
 
 import './Profile.css';
 
-export default function Profile() {
+const Profile = forwardRef((props, ref) => {
     const imgLocation = dataImgs.find(img => img.name === "location");
     const imgLinkedIn = dataImgs.find(img => img.name === "linkedin");
     const imgGitHub = dataImgs.find(img => img.name === "github");
@@ -27,7 +27,7 @@ export default function Profile() {
     }, []);
     
     return (
-        <div className="layoutWhite layoutWhite--profile">
+        <section ref={ref} className="layoutWhite layoutWhite--profile">
             <div className="profile-content">
                 <div className="content-box">
                     <h1 style={{ paddingBottom: '20px', fontSize: '32px' }}>Hi, I'm Aaron 👋</h1>
@@ -70,6 +70,8 @@ export default function Profile() {
             </div>
 
 
-        </div>
+        </section>
     );
-}
+});
+
+export default Profile;

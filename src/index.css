@@ -11,7 +11,7 @@
 body {
   margin: 0;
   overflow-x: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI';
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -21,12 +21,13 @@ code {
     monospace;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, div {
+/* body, h1, h2, h3, h4, h5, h6, p, div {
   font-family: "Segoe UI", "Tahoma", "Geneva", "Verdana", "sans-serif";
-}
+} */
+
 strong {
   color: var(--Dark-font, #323232);
-  font-family: "Segoe UI";
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma;
   font-size: inherit;
   font-style: bold;
   font-weight: 700;
@@ -36,7 +37,7 @@ strong {
 title {
   color: var(--Dark-font, #323232);
   text-align: center;
-  font-family: "Segoe UI";
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma;
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
@@ -52,7 +53,7 @@ title {
 
 p {
   color: var(--Dark-font-75, rgba(50, 50, 50, 0.75));
-  font-family: "Segoe UI";
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma;
   font-size: 12px;
   font-style: normal;
   font-weight: 600;
@@ -62,7 +63,7 @@ p {
 
 h1 {
   color: var(--Dark-font, #323232);
-  font-family: "Segoe UI";
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma;
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
@@ -75,7 +76,7 @@ h1 {
 h2 {
   color: var(--Dark-font-75, rgba(50, 50, 50, 0.75));
   text-align: center;
-  font-family: "Segoe UI";
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -88,7 +89,7 @@ h2 {
 
 h3 {
   color: var(--Dark-font, #323232);
-  font-family: "Segoe UI";
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -98,7 +99,7 @@ h3 {
 
 h4 {
   color: var(--Dark-font-75, rgba(50, 50, 50, 0.75));
-  font-family: "Segoe UI";
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -115,7 +116,7 @@ h4 {
 
 h5 {
   color: var(--Dark-font-75, rgba(50, 50, 50, 0.75));
-  font-family: "Segoe UI";
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma;
   font-size: 16px;
   font-style: italic;
   font-weight: 400;
@@ -133,7 +134,7 @@ ul {
 
 li {
   color: var(--Dark-font-75, rgba(50, 50, 50, 0.75));
-  font-family: "Segoe UI";
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma;
   font-size: 12px;
   font-style: normal;
   font-weight: 600;
@@ -174,4 +175,24 @@ li {
 
 .layoutWhite--profile {
   height: 100vh;
+}
+
+.nav-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  z-index: 1000; /* Ensure it stays on top */
+  transition: opacity 0.3s;
+}
+
+.nav-buttons:hover {
+  opacity: 0.8;
 }
