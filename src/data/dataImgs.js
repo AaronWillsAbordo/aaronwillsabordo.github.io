@@ -29,4 +29,32 @@ export const dataImgs = [
         name: 'gear',
         source: `${process.env.PUBLIC_URL}/img/icon/gear.png`
     },
+    {
+        name: 'profileIcon',
+        source: `${process.env.PUBLIC_URL}/img/icon/profile.svg`
+    },
+    {
+        name: 'experienceIcon',
+        source: `${process.env.PUBLIC_URL}/img/icon/experience.svg`
+    },
+    {
+        name: 'skillsIcon',
+        source: `${process.env.PUBLIC_URL}/img/icon/skills.svg`
+    },
+    {
+        name: 'workIcon',
+        source: `${process.env.PUBLIC_URL}/img/icon/work.svg`
+    },
+    {
+        name: 'certificationsIcon',
+        source: `${process.env.PUBLIC_URL}/img/icon/certifications.svg`
+    },
+    {
+        name: 'aboutIcon',
+        source: `${process.env.PUBLIC_URL}/img/icon/about.svg`
+    },
+    {
+        name: 'contactIcon',
+        source: `${process.env.PUBLIC_URL}/img/icon/contact.svg`
+    },
 ]
