@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import {dataImgs} from './dataImgs';
-import {dataLinks} from './dataLinks';
+import {dataImgs} from '../data/dataImgs';
+import {dataLinks} from '../data/dataLinks';
 
 import './Profile.css';
 

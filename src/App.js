@@ -1,17 +1,17 @@
 import React from 'react';
-import Profile from './Profile.js';
-import Experience from './Experience.js';
-import Skills from './Skills.js';
+import Profile from './layouts/Profile.js';
+import Experience from './layouts/Experience.js';
+import Skills from './layouts/Skills.js';
 
-import WorkInProgress from './WorkInProgress.js';
+import WorkInProgress from './layouts/WorkInProgress.js';
 
 function App() {
   return (
     <div>
       <Profile />
       <Experience />
-      <WorkInProgress />
       <Skills />
+      <WorkInProgress />
     </div>
   );
 }

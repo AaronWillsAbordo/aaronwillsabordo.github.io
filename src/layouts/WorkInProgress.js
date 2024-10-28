@@ -1,5 +1,5 @@
 import React from 'react';
-import {dataImgs} from './dataImgs';
+import {dataImgs} from '../data/dataImgs';
 import './WorkInProgress.css';
 
 export default function WorkInProgress() {
