@@ -2,7 +2,7 @@ export const data = [
     {
         id: 'nimbyx',
         company: 'Nimbyx Philippines Inc.',
-        source: `${process.env.PUBLIC_URL}/img/logo-nimbyx.jpg`,
+        source: `${process.env.PUBLIC_URL}/img/logo/logo-nimbyx.jpg`,
         roles: [{
                 title: 'Software Engineer 1',
                 date: 'Feb 2023 - Present',
@@ -53,7 +53,7 @@ export const data = [
     {
         id: 'vishay',
         company: 'Vishay Philippines Inc.',
-        source: `${process.env.PUBLIC_URL}/img/logo-vishay.png`,
+        source: `${process.env.PUBLIC_URL}/img/logo/logo-vishay.png`,
         roles: [
             {
                 title: 'OJT Failure Analysis Modules Quality',

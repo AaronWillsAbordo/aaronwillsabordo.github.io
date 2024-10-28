@@ -1,0 +1,55 @@
+{
+    "skills": [{
+        "id": "python",
+        "name": "Python",
+        "path": "/img/logo/python.svg"
+    },{
+        "id": "pytorch",
+        "name": "PyTorch",
+        "path": "/img/logo/pytorch.svg"
+    },{
+        "id": "pandas",
+        "name": "Pandas",
+        "path": "/img/logo/pandas.svg"
+    },{
+        "id": "fastapi",
+        "name": "FastAPI",
+        "path": "/img/logo/fastapi.svg"
+    },{
+        "id": "sql",
+        "name": "SQL",
+        "path": "/img/logo/azure sql.svg"
+    },{
+        "id": "dotnet",
+        "name": ".Net Framework",
+        "path": "/img/logo/dotnet.svg"
+    },{
+        "id": "react",
+        "name": "React",
+        "path": "/img/logo/react.svg"
+    },{
+        "id": "nodejs",
+        "name": "Node.js",
+        "path": "/img/logo/nodejs.svg"
+    },{
+        "id": "cypress",
+        "name": "Cypress",
+        "path": "/img/logo/cypress.svg"
+    },{
+        "id": "googlecloud",
+        "name": "Google Cloud",
+        "path": "/img/logo/devicon_googlecloud.svg"
+    },{
+        "id": "jira",
+        "name": "Jira",
+        "path": "/img/logo/jira.svg"
+    },{
+        "id": "figma",
+        "name": "Figma",
+        "path": "/img/logo/devicon_figma.svg"
+    },{
+        "id": "git",
+        "name": "Git",
+        "path": "/img/logo/git.svg"
+    }
+]}
