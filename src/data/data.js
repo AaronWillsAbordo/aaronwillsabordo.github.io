@@ -11,17 +11,17 @@ export const data = [
                     services and products, ensuring efficient development processes and streamlined deployments.`,
     
                     `Built <strong>automated workflows</strong> to simulate user actions, both UI-based (using front-end 
-                    automation tools) and non-UI-based (background services), utilizing <strong>Python</strong>, <strong>.NET</strong>, 
-                    and <strong>UiPath</strong> for seamless automation.`, 
+                    automation tools) and non-UI-based (background services), utilizing Python, .NET, 
+                    and UiPath for seamless automation.`, 
                     
                     `Developed <strong>unit</strong> and <strong>end-to-end 
-                    tests</strong> for web applications  using <strong>Cypress</strong>, improving test coverage and quality assurance.`,
+                    tests</strong> for web applications  using Cypress, improving test coverage and quality assurance.`,
     
                     `Contributed to the development of an <strong>internal web-based</strong> product, playing a key role in 
                     both <strong>front-end</strong> and <strong>back-end</strong> development.`, 
                     
-                    `Collaborated closely with both internal teams and end-users to ensure the product met functional requirements 
-                    and user needs.`, 
+                    `Collaborated closely with both internal teams and end-users to ensure the product met <strong>functional 
+                    requirements</strong> and <strong>user needs</strong>.`, 
                     
                     `Additionally, took on a <strong>key role in gathering requirements</strong>, facilitating communication, and 
                     coordinating efforts across teams to ensure product development aligned with business objectives.`
@@ -36,8 +36,8 @@ export const data = [
                 title: 'Machine Learning Engineer 1',
                 date: 'Jul 2023 - Jun 2024',
                 descriptions: [
-                    `Developed an AI-powered solution to automate and streamline <strong>3D mesh manipulation</strong>, reducing 
-                    manual labor and improving workflow efficiency.`,
+                    `Developed an AI-powered solution to automate and streamline 3D mesh manipulation, <strong>reducing 
+                    manual labor</strong> and <strong>improving workflow efficiency</strong>.`,
 
                     `Leveraged libraries such as <strong>PyVista</strong>, <strong>Vedo</strong>, <strong>Trimesh</strong>, 
                     and <strong>MeshLab</strong> to create a robust program capable of precisely manipulating 

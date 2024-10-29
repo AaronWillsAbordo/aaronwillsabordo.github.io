@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 // import {data} from '../data/data';
-// import './Experience.css';
+import './Work.css';
 
-export default function Work() {
+const Work = forwardRef((props, ref) => {
+    
     return (
-        <section className="layoutCream">
+        <section className="layoutCream" ref={ref}>
             <title>Work</title>
             <h2> Some of the noteworthy projects I have built: </h2>
+
+            
         </section>
     );
-}
+})
+
+export default Work;
