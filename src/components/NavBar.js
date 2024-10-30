@@ -6,6 +6,7 @@ export default function NavBar({ profileRef, skillsRef, experienceRef, workRef }
     const imgProfileIcon = dataImgs.find(img => img.name === "profileIcon");
     const imgExperienceIcon = dataImgs.find(img => img.name === "experienceIcon");
     const imgSkillsIcon = dataImgs.find(img => img.name === "skillsIcon");
+    const imgWorkIcon = dataImgs.find(img => img.name === "workIcon");
 
     const scrollToSection = (elementRef) => {
         window.scrollTo({
@@ -22,9 +23,12 @@ export default function NavBar({ profileRef, skillsRef, experienceRef, workRef }
         const profileTop = profileRef.current.offsetTop;
         const experienceTop = experienceRef.current.offsetTop;
         const skillsTop = skillsRef.current.offsetTop;
+        const workTop = workRef.current.offsetTop;
         const scrollPosition = window.scrollY + window.innerHeight / 2; // Adjust the scroll detection to be more forgiving
 
-        if (scrollPosition >= skillsTop) {
+        if (scrollPosition >= workTop){
+            setActiveSection('work');
+        } else if (scrollPosition >= skillsTop) {
             setActiveSection('skills');
         } else if (scrollPosition >= experienceTop) {
             setActiveSection('experience');
@@ -92,6 +96,14 @@ export default function NavBar({ profileRef, skillsRef, experienceRef, workRef }
                 style={buttonStyle('skills')}
             >
                 <img src={imgSkillsIcon.source} alt="Skills Icon" /> Skills
+            </button>
+            <button 
+                onMouseOver={() => handleMouseOver('work')}
+                onMouseOut={handleMouseOut}
+                onClick={() => scrollToSection(workRef)}
+                style={buttonStyle('work')}
+            >
+                <img src={imgWorkIcon.source} alt="Work Icon" /> Work
             </button>
         </div>
     );

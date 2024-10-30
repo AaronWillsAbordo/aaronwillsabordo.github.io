@@ -12,13 +12,15 @@
             "magna augue eleifend felis, nec venenatis purus augue nec justo. Vestibulum ", 
             "vel ultrices lacus."],
             "skills": ["skill1", "skill2"],
-            "img": "/img/work/workSample1.jpg"
+            "img": "/img/work/workSample1.jpg",
+            "link": "#"
             },{
             "id": "sample2",
             "title": "sampleTitle2",
             "description": ["sample description"],
             "skills": ["skill1", "skill2"],
-            "img": "/img/work/workSample2.jpg"
+            "img": "/img/work/workSample2.jpg",
+            "link": "#"
         }
 ]
 }
