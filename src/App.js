@@ -18,12 +18,13 @@ function App() {
       <Profile ref={profileRef} />
       <Experience ref={experienceRef} />
       <Skills ref={skillsRef} />
-      {/* <Work ref={workRef} /> */}
+      <Work ref={workRef} />
       <WorkInProgress />
       <NavBar 
         profileRef={profileRef} 
         experienceRef={experienceRef} 
         skillsRef={skillsRef} 
+        workRef={workRef} 
       />
     </div>
   );

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { dataImgs } from '../data/dataImgs';
 import './NavBar.css';
 
-export default function NavBar({ profileRef, skillsRef, experienceRef }) {
+export default function NavBar({ profileRef, skillsRef, experienceRef, workRef }) {
     const imgProfileIcon = dataImgs.find(img => img.name === "profileIcon");
     const imgExperienceIcon = dataImgs.find(img => img.name === "experienceIcon");
     const imgSkillsIcon = dataImgs.find(img => img.name === "skillsIcon");

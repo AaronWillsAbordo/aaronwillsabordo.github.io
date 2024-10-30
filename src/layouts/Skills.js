@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import dataSkills from '../data/dataSkills.json'; // default import
+import dataSkills from '../data/dataSkills.json'; 
 import './Skills.css';
 
 const Skills = forwardRef((props, ref) => {

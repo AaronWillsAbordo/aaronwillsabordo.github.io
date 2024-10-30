@@ -57,4 +57,8 @@ export const dataImgs = [
         name: 'contactIcon',
         source: `${process.env.PUBLIC_URL}/img/icon/contact.svg`
     },
+    {
+        name: 'goto',
+        source: `${process.env.PUBLIC_URL}/img/icon/goto.svg`
+    },
 ]
