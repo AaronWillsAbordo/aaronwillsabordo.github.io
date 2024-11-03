@@ -1,26 +1,48 @@
 {
     "work": [
         {
-            "id": "sample1",
-            "title": "sampleTitle1",
-            "description": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. ", 
-            "Morbi quis tristique est, in lacinia dolor. Quisque eget neque ac lacus ", 
-            "sodales dignissim a nec turpis. Suspendisse ut sollicitudin elit, porttitor ", 
-            "interdum velit. Duis in arcu pellentesque, varius tellus nec, facilisis ", 
-            "lacus. Donec erat tellus, venenatis vitae hendrerit et, lacinia ", 
-            "vel est. In ac turpis ex. Sed sollicitudin, dui nec rhoncus eleifend, ", 
-            "magna augue eleifend felis, nec venenatis purus augue nec justo. Vestibulum ", 
-            "vel ultrices lacus."],
-            "skills": ["skill1", "skill2"],
-            "img": "/img/work/workSample1.jpg",
-            "link": "#"
-            },{
+            "id": "untitled game",
+            "title": "untitled game",
+            "description": [
+                "You like free candy?",
+                " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ", 
+                "Morbi quis tristique est, in lacinia dolor. Quisque eget neque ac lacus ", 
+                "sodales dignissim a nec turpis. Suspendisse ut sollicitudin elit, porttitor ", 
+                "interdum velit. Duis in arcu pellentesque, varius tellus nec, facilisis ", 
+                "lacus. Donec erat tellus, venenatis vitae hendrerit et, lacinia ", 
+                "vel est. In ac turpis ex. Sed sollicitudin, dui nec rhoncus eleifend, ", 
+                "magna augue eleifend felis, nec venenatis purus augue nec justo. Vestibulum ", 
+                "vel ultrices lacus."   
+            ],
+            "skills": ["Unity 3D", "C#", "Game Development", "Game Design"],
+            "imgs": [
+                "/img/work/untitledgame/untitledgame.png", 
+                "/img/work/untitledgame/untitledgame (2).png",
+                "/img/work/untitledgame/untitledgame (3).png"
+                
+            ],
+            "link": "#",
+            "category": "project"
+        },
+        {
             "id": "sample2",
             "title": "sampleTitle2",
-            "description": ["sample description"],
+            "description": [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ", 
+                "Morbi quis tristique est, in lacinia dolor. Quisque eget neque ac lacus ", 
+                "sodales dignissim a nec turpis. Suspendisse ut sollicitudin elit, porttitor ", 
+                "interdum velit. Duis in arcu pellentesque, varius tellus nec, facilisis ", 
+                "lacus. Donec erat tellus, venenatis vitae hendrerit et, lacinia ", 
+                "vel est. In ac turpis ex. Sed sollicitudin, dui nec rhoncus eleifend, ", 
+                "magna augue eleifend felis, nec venenatis purus augue nec justo. Vestibulum ", 
+                "vel ultrices lacus."
+            ],
             "skills": ["skill1", "skill2"],
-            "img": "/img/work/workSample2.jpg",
-            "link": "#"
+            "imgs": [
+                "/img/photo/portrait_sampler.jpg"
+            ],
+            "link": "#",
+            "category": "repo"
         }
 ]
 }

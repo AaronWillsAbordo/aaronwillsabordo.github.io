@@ -10,29 +10,96 @@
     margin-bottom: 20px;
 }
 
-.work-column-left {
-    min-width: 400px;
-    max-width: 600px;
-    flex-shrink: 0;
+.work-column-right {
     display: flex;
-    justify-content: center;
+    width: 454px;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+}
+
+
+.work-column-left {
+    width: 400px;
+    display: flex;
+    justify-content: center; /* Center carousel within the column */
     align-items: center;
 }
 
-.work-column-left img {
-    max-width: 400px;
-    max-height: 400px;
+.work-column-left 
+.carousel {
+    max-width: 380px;
+    max-height: 600px;
+    overflow: hidden;
+    position: relative;
 }
 
-.work-column-right {
-    flex-grow: 1;
-    padding-left: 20px;
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
 }
 
-.work-column-right h1 {
-    margin-bottom: 8px;
+.carousel-slide {
+    min-width: 100%;
+    flex-shrink: 0;
+    max-height: 600px;
 }
 
-.work-column-right p {
-    margin-bottom: 16px;
+.carousel-image {
+    width: 100%;
+    /* height: 200px; */
+    max-height: 600px;
+    object-fit: contain;
+}
+
+
+/* DOTS */
+
+.carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 4px; /* Adjust spacing between dots */
+    z-index: 2;
+}
+
+.carousel-dots div {
+    width: 5px;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-dots div.p-2 {
+    background-color: white;
+    transform: scale(1.2);
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
 }
