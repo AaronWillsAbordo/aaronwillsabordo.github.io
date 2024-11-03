@@ -42,7 +42,8 @@ const Work = forwardRef((props, ref) => {
             <div className="carousel">
                 <div
                     className="carousel-track"
-                    style={{ transform: `translateX(-${curr * 100}%)` }}
+                    style={{ transform: `translateX(-${curr * 100}%)`
+                    }}
                 >
                     {images.map((image, index) => (
                         <div key={index} className="carousel-slide">
@@ -52,7 +53,8 @@ const Work = forwardRef((props, ref) => {
                                 className="carousel-image"
                                 style={{
                                     height: isPortrait ? '600px' : '200px',
-                                    objectPosition: 'center center' // Center the image vertically
+                                    // width: isPortrait ? '200px' : '380px',
+                                    objectPosition: 'center center' 
                                 }}
                                 onLoad={handleImageLoad}
                             />

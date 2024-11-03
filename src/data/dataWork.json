@@ -4,8 +4,8 @@
             "id": "untitled game",
             "title": "untitled game",
             "description": [
-                "You like free candy?",
-                " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ", 
+                "You like free candy?\n",
+                "\nLorem ipsum dolor sit amet, consectetur adipiscing elit. ", 
                 "Morbi quis tristique est, in lacinia dolor. Quisque eget neque ac lacus ", 
                 "sodales dignissim a nec turpis. Suspendisse ut sollicitudin elit, porttitor ", 
                 "interdum velit. Duis in arcu pellentesque, varius tellus nec, facilisis ", 
