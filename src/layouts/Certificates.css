@@ -1,0 +1,65 @@
+.certificates-section {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.certificates-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1000px; /* Adjust based on your design */
+}
+
+.certificate-box {
+    flex: 1 1 250px;
+    max-width: 250px;
+    padding: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--cream);
+}
+
+.ribbon-image {
+    width: 86px;
+    height: 86px;
+    margin-bottom: 20px;
+}
+
+.certificate-details {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.certificate-details .goto-container {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.left-column img {
+    max-height: 40px;
+    max-width: 70px;
+}
+
+.certificate-title {
+    font-size: 18px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.certificate-school, .certificate-id {
+    font-size: 14px;
+    color: var(--darkFont75);
+    text-align: center;
+}
+
+.skills-container {
+    justify-content: center; /* Center-align skills */
+}

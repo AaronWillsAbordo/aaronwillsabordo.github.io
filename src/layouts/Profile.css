@@ -116,6 +116,7 @@
     animation: bounce 1s infinite;
     transition: opacity 0.3s ease;
     opacity: 1;
+    pointer-events: none
 }
 
 .scroll-arrow.hidden {

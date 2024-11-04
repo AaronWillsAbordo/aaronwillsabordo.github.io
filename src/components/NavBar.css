@@ -17,19 +17,24 @@
     border: 2px solid transparent;
     color: var(--darkFont75);
     font-size: 12px;
-    padding: 8px 12px;
+    padding: 5px 32px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .nav-bar button:hover {
     font-size: 16px;
-
 }
+
 .nav-bar button.active {
     color: var(--darkFont);
     font-size: 16px;
-    font-weight: bold; /* Make font bold on hover and when active */
+    font-weight: bold; 
+}
+
+.nav-bar button.active img {
+    transform: scale(2);
+    transition: transform 0.3s ease;
 }
 
 .nav-bar img {
@@ -53,7 +58,10 @@
 
     .nav-bar button:hover {
         font-size: 14px;
-        /* font-weight: bold; */
+    }
+
+    .nav-bar button.active img {
+        transform: scale(2); 
     }
 
     .nav-bar img {

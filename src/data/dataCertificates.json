@@ -1,0 +1,47 @@
+{
+    "certificates": [
+    {
+        "id": "5",
+        "title": "Intro to PyTorch and Neural Networks Course",
+        "schoolName": "Codecademy",
+        "skillsArray": ["PyTorch", "Neural Networks"],
+        "logo": "/img/logo/codecademy.png",
+        "link": "#"
+    },
+    {
+        "id": "4",
+        "title": "Scientific Computing with Python",
+        "schoolName": "freeCodeCamp",
+        "skillsArray": ["Python", "Scientific Computing", "Object-Oriented Programming (OOP)", "Data Structures", "Algorithms"],
+        "logo": "/img/logo/freecodecamp.png",
+        "link": "#"
+    },
+    {
+        "id": "3",
+        "title": "Career Essentials in Software Development",
+        "schoolName": "Microsoft and LinkedIn",
+        "skillsArray": ["Programming", "Python", "Software Development"],
+        "logo": "/img/logo/freecodecamp.png",
+        "link": "#",
+        "leftColumnImage": "/img/logo/linkedinlearning.png"
+    },
+    {
+        "id": "2",
+        "title": "Data Science Training",
+        "schoolName": "DataCamp",
+        "skillsArray": ["Python", "Data Analysis", "Machine Learning"],
+        "logo": "/img/logo/freecodecamp.png",
+        "link": "#",
+        "leftColumnImage": "/img/logo/tesda.png"
+    },
+    {
+        "id": "1",
+        "title": "Data Science Training",
+        "schoolName": "DataCamp",
+        "skillsArray": ["Python", "Data Analysis", "Machine Learning"],
+        "logo": "/img/logo/freecodecamp.png",
+        "link": "#"
+    }
+    ]
+  }
+  
