@@ -59,7 +59,3 @@
     color: var(--darkFont75);
     text-align: center;
 }
-
-.skills-container {
-    justify-content: center; /* Center-align skills */
-}
