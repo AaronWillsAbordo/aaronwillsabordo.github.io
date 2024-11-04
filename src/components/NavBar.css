@@ -22,10 +22,14 @@
     transition: all 0.3s ease;
 }
 
-.nav-bar button:hover,
+.nav-bar button:hover {
+    font-size: 16px;
+
+}
 .nav-bar button.active {
     color: var(--darkFont);
     font-size: 16px;
+    font-weight: bold; /* Make font bold on hover and when active */
 }
 
 .nav-bar img {
@@ -33,7 +37,6 @@
     height: 16px;
     margin-right: 8px;
 }
-
 
 @media (max-width: 600px) {
     .nav-bar {
@@ -50,6 +53,7 @@
 
     .nav-bar button:hover {
         font-size: 14px;
+        /* font-weight: bold; */
     }
 
     .nav-bar img {

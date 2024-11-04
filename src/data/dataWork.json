@@ -5,13 +5,14 @@
             "title": "untitled game",
             "description": [
                 "You like free candy?\n",
-                "\nLorem ipsum dolor sit amet, consectetur adipiscing elit. ", 
-                "Morbi quis tristique est, in lacinia dolor. Quisque eget neque ac lacus ", 
-                "sodales dignissim a nec turpis. Suspendisse ut sollicitudin elit, porttitor ", 
-                "interdum velit. Duis in arcu pellentesque, varius tellus nec, facilisis ", 
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+                "Morbi quis tristique est, in lacinia dolor. Quisque eget neque ac ",
+                "lacus sodales dignissim a nec turpis. Suspendisse ut sollicitudin ",
+                "elit, porttitor interdum velit. Duis in ",
+                "arcu pellentesque, varius tellus nec, facilisis ", 
                 "lacus. Donec erat tellus, venenatis vitae hendrerit et, lacinia ", 
                 "vel est. In ac turpis ex. Sed sollicitudin, dui nec rhoncus eleifend, ", 
-                "magna augue eleifend felis, nec venenatis purus augue nec justo. Vestibulum ", 
+                "magna augue eleifend felis, nec **venenatis** purus augue nec justo. Vestibulum ", 
                 "vel ultrices lacus."   
             ],
             "skills": ["Unity 3D", "C#", "Game Development", "Game Design"],
@@ -23,26 +24,6 @@
             ],
             "link": "#",
             "category": "project"
-        },
-        {
-            "id": "sample2",
-            "title": "sampleTitle2",
-            "description": [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ", 
-                "Morbi quis tristique est, in lacinia dolor. Quisque eget neque ac lacus ", 
-                "sodales dignissim a nec turpis. Suspendisse ut sollicitudin elit, porttitor ", 
-                "interdum velit. Duis in arcu pellentesque, varius tellus nec, facilisis ", 
-                "lacus. Donec erat tellus, venenatis vitae hendrerit et, lacinia ", 
-                "vel est. In ac turpis ex. Sed sollicitudin, dui nec rhoncus eleifend, ", 
-                "magna augue eleifend felis, nec venenatis purus augue nec justo. Vestibulum ", 
-                "vel ultrices lacus."
-            ],
-            "skills": ["skill1", "skill2"],
-            "imgs": [
-                "/img/photo/portrait_sampler.jpg"
-            ],
-            "link": "#",
-            "category": "repo"
         }
 ]
 }

@@ -2,6 +2,7 @@ import React, { useState, useEffect, forwardRef } from 'react';
 import dataWork from '../data/dataWork.json';
 import { dataImgs } from '../data/dataImgs';
 import './Work.css';
+import ReactMarkdown from 'react-markdown';
 
 const Work = forwardRef((props, ref) => {
     const imgGoto = dataImgs.find(img => img.name === "goto");
@@ -42,8 +43,7 @@ const Work = forwardRef((props, ref) => {
             <div className="carousel">
                 <div
                     className="carousel-track"
-                    style={{ transform: `translateX(-${curr * 100}%)`
-                    }}
+                    style={{ transform: `translateX(-${curr * 100}%)` }}
                 >
                     {images.map((image, index) => (
                         <div key={index} className="carousel-slide">
@@ -53,7 +53,6 @@ const Work = forwardRef((props, ref) => {
                                 className="carousel-image"
                                 style={{
                                     height: isPortrait ? '600px' : '200px',
-                                    // width: isPortrait ? '200px' : '380px',
                                     objectPosition: 'center center' 
                                 }}
                                 onLoad={handleImageLoad}
@@ -93,7 +92,11 @@ const Work = forwardRef((props, ref) => {
                     </div>
                     <div className="work-column-right">
                         <h1>{project.title}</h1>
-                        <p>{project.description}</p>
+                        <p>
+                            <ReactMarkdown>
+                                {project.description.join('\n')}
+                            </ReactMarkdown>
+                        </p>
                         <div className="skills-container">
                             {project.skills.map((skill, index) => (
                                 <span key={index} className="skill-box">{skill}</span>
