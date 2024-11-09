@@ -28,6 +28,7 @@ function App() {
         experienceRef={experienceRef} 
         skillsRef={skillsRef} 
         workRef={workRef} 
+        certificatesRef={certificatesRef}
       />
     </div>
   );

@@ -1,9 +1,3 @@
-/* .certificates-section {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-} */
-
 .certificates-container {
     display: flex;
     flex-wrap: wrap;
@@ -23,11 +17,18 @@
     align-items: center;
     background-color: var(--cream);
 }
+.ribbon-image-container{
+    /* width: 86px; */
+    height: 86px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
 
 .ribbon-image {
-    width: 86px;
-    height: 86px;
-    margin-bottom: 20px;
+    max-width: 200px;
+    max-height: 86px;
 }
 
 .certificate-details {
@@ -48,10 +49,12 @@
     font-size: 18px;
     margin: 10px 0;
     text-align: center;
+    width: fit-content;
 }
 
 .certificate-school, .certificate-id {
     font-size: 14px;
     color: var(--darkFont75);
     text-align: center;
+    width: fit-content;
 }

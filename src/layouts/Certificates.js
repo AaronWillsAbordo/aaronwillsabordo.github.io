@@ -6,6 +6,13 @@ import { dataImgs } from '../data/dataImgs';
 const Certificates = forwardRef((props, ref) => {
     const imgGoto = dataImgs.find(img => img.name === "goto");
 
+    // const handleImageLoad = (e) => {
+    //     const img = e.target;
+    //     if (img.naturalWidth > img.naturalHeight) {
+    //         img.style.width = '150px';
+    //     }
+    // };
+
     return (
         <section ref={ref} className="layoutWhite">
             <title>Certificates</title>
@@ -13,7 +20,15 @@ const Certificates = forwardRef((props, ref) => {
             <div className="certificates-container">
                 {dataCertificates.certificates.map((cert) => (
                     <div key={cert.id} className="certificate-box">
-                        <img src={cert.logo} alt={`${cert.schoolName} logo`} className="ribbon-image" />
+
+                        <div className='ribbon-image-container'>
+                            <img 
+                                src={cert.logo} 
+                                alt={`${cert.schoolName} logo`} 
+                                className="ribbon-image" 
+                                // onLoad={handleImageLoad}
+                            />
+                        </div>
                         
                         <div className="certificate-details">
                             <div className="left-column">
@@ -21,10 +36,10 @@ const Certificates = forwardRef((props, ref) => {
                                     <img src={cert.leftColumnImage} alt="Certificate Icon" />
                                 )}
                             </div>
-                            <button className="goto-box" onClick={() => window.open(cert.link, "_blank")}>
+                            <a href={cert.link} target="_blank" rel="noopener noreferrer" className="goto-box">
                                 Show credentials
                                 <img src={imgGoto.source} alt="goto-creds" className="goto-icon" />
-                            </button>
+                            </a>
                         </div>
 
                         <h1 className="certificate-title">{cert.title}</h1>

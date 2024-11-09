@@ -6,12 +6,12 @@ export const dataImgs = [
     {
         name: 'github',
         source: `${process.env.PUBLIC_URL}/img/logo/devicon_github.svg`,
-        url: "#"
+        url: "https://github.com/AaronWillsAbordo"
     },
     {
         name: 'linkedin',
         source: `${process.env.PUBLIC_URL}/img/logo/devicon_linkedin.svg`,
-        url: "#"
+        url: "https://www.linkedin.com/in/aaron-wills-abordo/"
     },
     {
         name: 'profile',

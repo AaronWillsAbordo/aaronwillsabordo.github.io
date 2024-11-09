@@ -233,6 +233,7 @@ li {
   text-align: center;
   outline: none;
   width: fit-content;
+  text-decoration: none;
 }
 
 .goto-box:hover {

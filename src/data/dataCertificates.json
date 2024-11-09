@@ -6,7 +6,7 @@
         "schoolName": "Codecademy",
         "skillsArray": ["PyTorch", "Neural Networks"],
         "logo": "/img/logo/codecademy.png",
-        "link": "#"
+        "link": "https://drive.google.com/file/d/13WOBP6Q1puY6lKbBtvFXqYHa7cLeCUhn/view?usp=drive_link"
     },
     {
         "id": "4",
@@ -14,32 +14,32 @@
         "schoolName": "freeCodeCamp",
         "skillsArray": ["Python", "Scientific Computing", "Object-Oriented Programming (OOP)", "Data Structures", "Algorithms"],
         "logo": "/img/logo/freecodecamp.png",
-        "link": "#"
+        "link": "https://www.freecodecamp.org/certification/RenTathamet/scientific-computing-with-python-v7"
     },
     {
         "id": "3",
         "title": "Career Essentials in Software Development",
         "schoolName": "Microsoft and LinkedIn",
         "skillsArray": ["Programming", "Python", "Software Development"],
-        "logo": "/img/logo/freecodecamp.png",
-        "link": "#",
+        "logo": "/img/logo/ms_square.png",
+        "link": "https://drive.google.com/file/d/1aSZHF5lXUkxotjLJi5CfPCvYFrJ7RcUA/view?usp=drive_link",
         "leftColumnImage": "/img/logo/linkedinlearning.png"
     },
     {
         "id": "2",
-        "title": "Data Science Training",
-        "schoolName": "DataCamp",
-        "skillsArray": ["Python", "Data Analysis", "Machine Learning"],
-        "logo": "/img/logo/freecodecamp.png",
+        "title": "Web Development NC III",
+        "schoolName": "Mindtech Training and Development Institute Inc.",
+        "skillsArray": ["PHP", "Java Programming Language", "SQL"],
+        "logo": "/img/logo/mindtech.png",
         "link": "#",
         "leftColumnImage": "/img/logo/tesda.png"
     },
     {
         "id": "1",
-        "title": "Data Science Training",
-        "schoolName": "DataCamp",
-        "skillsArray": ["Python", "Data Analysis", "Machine Learning"],
-        "logo": "/img/logo/freecodecamp.png",
+        "title": "Game Design and Development",
+        "schoolName": "CIIT College of Arts and Technology Inc.",
+        "skillsArray": ["C# Programming Language", "Unity 3D", "Game Development", "Game Design"],
+        "logo": "/img/logo/ciit.png",
         "link": "#"
     }
     ]
