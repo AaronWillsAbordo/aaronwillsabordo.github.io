@@ -7,7 +7,7 @@ const Certificates = forwardRef((props, ref) => {
     const imgGoto = dataImgs.find(img => img.name === "goto");
 
     return (
-        <section ref={ref} className="layoutWhite certificates-section">
+        <section ref={ref} className="layoutWhite">
             <title>Certificates</title>
             <h2>Education and trainings I took:</h2>
             <div className="certificates-container">
@@ -16,17 +16,15 @@ const Certificates = forwardRef((props, ref) => {
                         <img src={cert.logo} alt={`${cert.schoolName} logo`} className="ribbon-image" />
                         
                         <div className="certificate-details">
-                            {cert.leftColumnImage && (
-                                <div className="left-column">
+                            <div className="left-column">
+                                {cert.leftColumnImage && (
                                     <img src={cert.leftColumnImage} alt="Certificate Icon" />
-                                </div>
-                            )}
-                            <div className="goto-container">
-                                <div className="goto-box" onClick={() => window.open(cert.link, "_blank")}>
-                                    Show credentials
-                                    <img src={imgGoto.source} alt="goto-creds" className="goto-icon" />
-                                </div>
+                                )}
                             </div>
+                            <button className="goto-box" onClick={() => window.open(cert.link, "_blank")}>
+                                Show credentials
+                                <img src={imgGoto.source} alt="goto-creds" className="goto-icon" />
+                            </button>
                         </div>
 
                         <h1 className="certificate-title">{cert.title}</h1>

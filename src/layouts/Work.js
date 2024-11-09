@@ -102,12 +102,10 @@ const Work = forwardRef((props, ref) => {
                                 <span key={index} className="skill-box">{skill}</span>
                             ))}
                         </div>
-                        <div className="goto-container">
-                            <div className="goto-box" onClick={() => window.open(project.link, "_blank")}>
-                                {project.category === "repo" ? "Goto repo" : "See project"}
-                                <img src={imgGoto.source} alt="Go to project" className="goto-icon" />
-                            </div>
-                        </div>
+                        <button className="goto-box" style={{marginTop: '15px'}} onClick={() => window.open(project.link, "_blank") }>
+                            {project.category === "repo" ? "Goto repo" : "See project"}
+                            <img src={imgGoto.source} alt="Go to project" className="goto-icon" />
+                        </button>
                     </div>
                 </div>
             ))}

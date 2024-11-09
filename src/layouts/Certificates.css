@@ -1,8 +1,8 @@
-.certificates-section {
+/* .certificates-section {
     padding: 20px;
     display: flex;
     justify-content: center;
-}
+} */
 
 .certificates-container {
     display: flex;
@@ -35,12 +35,8 @@
     width: 100%;
     justify-content: space-between;
     margin: 10px 0;
-}
-
-.certificate-details .goto-container {
-    display: flex;
-    justify-content: flex-end;
-    flex-grow: 1;
+    columns: 2;
+    align-items: center;
 }
 
 .left-column img {
