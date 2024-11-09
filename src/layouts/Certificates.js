@@ -45,6 +45,7 @@ const Certificates = forwardRef((props, ref) => {
                         <h1 className="certificate-title">{cert.title}</h1>
                         <h2 className="certificate-school">{cert.schoolName}</h2>
                         {cert.credentialId && <h2 className="certificate-id">ID: {cert.credentialId}</h2>}
+                        
                         <div className="skills-container" style={{justifyContent: 'center'}}>
                             {cert.skillsArray.map((skill, index) => (
                                 <span key={index} className="skill-box">{skill}</span>

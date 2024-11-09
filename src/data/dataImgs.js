@@ -18,6 +18,10 @@ export const dataImgs = [
         source: `${process.env.PUBLIC_URL}/img/photo/profile.jpg`
     },
     {
+        name: 'profile2',
+        source: `${process.env.PUBLIC_URL}/img/photo/portrait_sampler.jpg`
+    },
+    {
         name: 'arrowDown',
         source: `${process.env.PUBLIC_URL}/img/icon/arrowDown.svg`
     },

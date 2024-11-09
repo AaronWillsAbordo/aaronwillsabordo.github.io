@@ -1,0 +1,42 @@
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 854px;
+    padding: 20px;
+    margin-bottom: 20px;
+    columns: 2;
+}
+
+.about-right-column{
+    width: 50%;
+}
+
+.about-image-section {
+    width: 50%;
+    flex-basis: 300px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    align-items: center;
+}
+
+.about-profile-image {
+    width: 100%;
+    /* max-width: 200px; */
+    height: 100%;
+    /* max-height: 300px; */
+    border: 20px solid var(--white, #ffffff);
+    position: relative;
+    z-index: 1;
+}
+
+#about-rectangle {
+    width: 200px;
+    height: 250px;
+    background: var(--gray);
+    position: absolute;
+    top: 80px;
+    left: 100px;
+    z-index: 0;
+}

@@ -31,7 +31,7 @@
         "schoolName": "Mindtech Training and Development Institute Inc.",
         "skillsArray": ["PHP", "Java Programming Language", "SQL"],
         "logo": "/img/logo/mindtech.png",
-        "link": "#",
+        "link": "https://drive.google.com/file/d/1GxogRYzSpcBRvM9yFO4Jf71Dl6gP_Mv-/view?usp=drive_link",
         "leftColumnImage": "/img/logo/tesda.png"
     },
     {
@@ -40,7 +40,7 @@
         "schoolName": "CIIT College of Arts and Technology Inc.",
         "skillsArray": ["C# Programming Language", "Unity 3D", "Game Development", "Game Design"],
         "logo": "/img/logo/ciit.png",
-        "link": "#"
+        "link": "https://drive.google.com/file/d/18Clbyz5O88P48Kl0qPHyWYGbN8z8JusG/view?usp=drive_link"
     }
     ]
   }

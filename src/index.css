@@ -222,7 +222,7 @@ li {
   align-items: center;
   padding: 4px 16px;
   font-size: 14px;
-  background-color: inherit;
+  background-color: var(--white, #ffffff);
   border-radius: 16px;
   border: 2px solid var(--lightgray, #f0f0f0);
   color: var(--darkFont75, #323232);
