@@ -9,11 +9,11 @@
 }
 
 .about-right-column{
-    width: 50%;
+    width: 63%;
 }
 
 .about-image-section {
-    width: 50%;
+    width: 37%;
     flex-basis: 300px;
     display: flex;
     justify-content: flex-end;

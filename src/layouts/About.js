@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
-// import dataSkills from '../data/dataSkills.json'; 
-import {dataImgs} from '../data/dataImgs';
+import ReactMarkdown from 'react-markdown';
+import { dataAbout } from '../data/data';
+import { dataImgs } from '../data/dataImgs';
 import './About.css';
 
 const Skills = forwardRef((props, ref) => {

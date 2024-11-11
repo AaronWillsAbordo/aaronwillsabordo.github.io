@@ -1,6 +1,7 @@
 import React, { useEffect, useState, forwardRef } from 'react';
-import {dataImgs} from '../data/dataImgs';
-import {dataLinks} from '../data/dataLinks';
+import { dataProfile } from '../data/data';
+import { dataImgs } from '../data/dataImgs';
+import { dataLinks } from '../data/dataLinks';
 
 import './Profile.css';
 
@@ -31,13 +32,8 @@ const Profile = forwardRef((props, ref) => {
             <div className="profile-content">
                 <div className="content-box">
                     <h1 style={{ paddingBottom: '20px', fontSize: '32px' }}>Hi, I'm Aaron 👋</h1>
-                    <h3>
-                        I’m a <strong>Software Engineer</strong> with expertise in <strong>Python</strong>
-                        , <strong>.NET</strong>, <strong>React</strong>, and <strong>data analytics</strong>, 
-                        dedicated to building efficient, scalable solutions. 
-                        I’m also passionate about creating impactful software 
-                        and exploring <strong>AI technologies</strong>. Eager to contribute to a challenging 
-                        and collaborative environment where I can continuously learn and grow.
+                    <h3 
+                        dangerouslySetInnerHTML={{ __html: dataProfile[0].profile.join('') }}>
                     </h3>
                     
                     <div className="location-content">

@@ -70,3 +70,40 @@ export const data = [
         ]
     }
 ]
+
+export const dataProfile = [
+    {
+        profile: [`
+            I’m a <strong>Software Engineer</strong> with expertise in <strong>Python</strong>
+            , <strong>.NET</strong>, <strong>React</strong>, and <strong>data analytics</strong>, 
+            dedicated to building efficient, scalable solutions. 
+            I’m also passionate about creating impactful software 
+            and exploring <strong>AI technologies</strong>. Eager to contribute to a challenging 
+            and collaborative environment where I can continuously learn and grow.
+        `]
+    }
+]
+
+export const dataAbout = [
+    {
+        about: [`
+            I am a goal-oriented, adaptable, and highly committed professional with a strong background in 
+            software development, machine learning, and web technologies. With hands-on experience 
+            in <strong>AI-powered 3D mesh manipulation</strong>, <strong>full-stack 
+            development</strong>, and <strong>software automation</strong>, I thrive on solving complex 
+            problems and continuously expanding my technical skillset.
+            <br />
+            <br />
+            My expertise includes building scalable, responsive web applications, automating 
+            workflows, and developing neural networks using Python. I enjoy working with diverse tools 
+            and technologies such as React, PyTorch, and cloud-based platforms, and I am always exploring 
+            new areas to further enhance my capabilities.
+            <br />
+            <br />
+            Throughout my journey, I have cultivated a passion for delivering impactful solutions, 
+            collaborating with talented teams, and driving innovation. I am committed to applying my 
+            knowledge to create meaningful results and continuously push the boundaries of what’s 
+            possible in the tech industry.
+            `]
+    }
+]
