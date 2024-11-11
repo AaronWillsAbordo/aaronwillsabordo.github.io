@@ -1,40 +1,43 @@
 .about-container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     width: 854px;
     padding: 20px;
     margin-bottom: 20px;
     columns: 2;
 }
 
-.about-right-column{
+.about-right-column {
     width: 63%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .about-image-section {
     width: 37%;
-    flex-basis: 300px;
     display: flex;
-    justify-content: flex-end;
-    position: relative;
+    justify-content: center;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .about-profile-image {
-    width: 100%;
+    width: auto;
     max-width: 300px;
-    height: 100%;
-    /* max-height: 300px; */
+    height: auto;
+    max-height: 400px;
     border: 20px solid var(--cream, #ffffff);
     position: relative;
     z-index: 1;
+    object-fit: contain;
 }
 
 #about-rectangle {
-    width: 200px;
-    height: 250px;
-    background: var(--gray);
+    width: 500px;
+    height: 500px;
+    background: var(--darkFont);
     position: absolute;
     top: 80px;
     left: 100px;
