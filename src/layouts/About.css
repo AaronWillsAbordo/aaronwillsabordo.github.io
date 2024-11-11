@@ -23,10 +23,10 @@
 
 .about-profile-image {
     width: 100%;
-    /* max-width: 200px; */
+    max-width: 300px;
     height: 100%;
     /* max-height: 300px; */
-    border: 20px solid var(--white, #ffffff);
+    border: 20px solid var(--cream, #ffffff);
     position: relative;
     z-index: 1;
 }

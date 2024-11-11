@@ -1,5 +1,4 @@
 import React, { forwardRef } from 'react';
-import ReactMarkdown from 'react-markdown';
 // import dataSkills from '../data/dataSkills.json'; 
 import {dataImgs} from '../data/dataImgs';
 import './About.css';
