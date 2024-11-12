@@ -8,22 +8,19 @@
     columns: 2;
 }
 
-.about-right-column {
+h3 > about-right-column {
     width: 63%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .about-image-section {
     width: 37%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-shrink: 0;
 }
 
 .about-profile-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: auto;
     max-width: 300px;
     height: auto;
@@ -35,11 +32,10 @@
 }
 
 #about-rectangle {
-    width: 500px;
-    height: 500px;
-    background: var(--darkFont);
+    width: 15rem;
+    height: 20rem;
+    background-color: var(--gray);
     position: absolute;
-    top: 80px;
-    left: 100px;
+    transform: translateX(-30px) translateY(-470px);
     z-index: 0;
 }

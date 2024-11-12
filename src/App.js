@@ -5,6 +5,7 @@ import Skills from './layouts/Skills.js';
 import Work from './layouts/Work.js';
 import Certificates from './layouts/Certificates.js';
 import About from './layouts/About.js';
+import Info from './layouts/Info.js';
 
 import NavBar from './components/NavBar';
 import WorkInProgress from './components/WorkInProgress.js';
@@ -16,6 +17,7 @@ function App() {
   const workRef = useRef(null);
   const certificatesRef = useRef(null);
   const aboutRef = useRef(null);
+  const infoRef = useRef(null);
 
   return (
     <div>
@@ -25,6 +27,7 @@ function App() {
       <Work ref={workRef} />
       <Certificates ref={certificatesRef} />
       <About ref={aboutRef} />
+      <Info ref={infoRef} />
       <WorkInProgress />
       <NavBar 
         profileRef={profileRef} 
@@ -32,6 +35,7 @@ function App() {
         skillsRef={skillsRef} 
         workRef={workRef} 
         certificatesRef={certificatesRef}
+        aboutRef={aboutRef}
       />
     </div>
   );

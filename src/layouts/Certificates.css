@@ -15,8 +15,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--cream);
+    background: linear-gradient(to bottom, var(--creamy) 10px, var(--cream) 86px);
 }
+
 .ribbon-image-container{
     /* width: 86px; */
     height: 86px;

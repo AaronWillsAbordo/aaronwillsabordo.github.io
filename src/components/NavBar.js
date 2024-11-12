@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import './NavBar.css';
 
-export default function NavBar({ profileRef, skillsRef, experienceRef, workRef, certificatesRef }) {
+export default function NavBar({ profileRef, skillsRef, experienceRef, workRef, certificatesRef, aboutRef }) {
     const [active, setActive] = useState('');
 
     const sections = [
@@ -11,6 +11,7 @@ export default function NavBar({ profileRef, skillsRef, experienceRef, workRef, 
         { ref: skillsRef, label: 'Skills', id: 'skills' },
         { ref: workRef, label: 'Works', id: 'works' },
         { ref: certificatesRef, label: 'Certificates', id: 'certificates' },
+        { ref: aboutRef, label: 'About', id: 'about' },
     ];
 
     const handleScroll = () => {
