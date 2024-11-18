@@ -106,16 +106,15 @@
 }
 
 .scroll-arrow {
-    position: fixed;
-    bottom: 20px;
+    position: absolute;
+    bottom: 0%;
     left: 50%;
-    transform: translateX(-50%);
-    font-size: 30px;
+    opacity: 1;
+
     color: var(--darkFont, #323232);
     z-index: 10;
     animation: bounce 1s infinite;
     transition: opacity 0.3s ease;
-    opacity: 1;
     pointer-events: none
 }
 
@@ -127,3 +126,40 @@
     opacity: 0.8;
 } */
 
+@media (max-width: 768px) {
+    .profile-content {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .content-box {
+        width: 90%;
+        text-align: center;
+    }
+
+    .image-section {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .profile-image {
+        max-width: 150px;
+        max-height: 200px;
+        border: 13px solid var(--white, #ffffff);
+    }
+
+    #rectangle {
+        width: 150px;
+        height: 200px;
+        top: 1px; 
+        left: 120px
+    }
+
+    .scroll-arrow {
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+}

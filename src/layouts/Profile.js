@@ -1,4 +1,5 @@
 import React, { useEffect, useState, forwardRef } from 'react';
+import { useMediaQuery } from "@uidotdev/usehooks";
 import { dataProfile } from '../data/data';
 import { dataImgs } from '../data/dataImgs';
 import { dataLinks } from '../data/dataLinks';
@@ -16,54 +17,95 @@ const Profile = forwardRef((props, ref) => {
     const [arrowVisible, setArrowVisible] = useState(true);
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY === 0) {
-                setArrowVisible(true);
-            } else {
+            if (window.scrollY > 0) {
                 setArrowVisible(false);
+            } else {
+                setArrowVisible(true);
             }
         };
 
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    const isMobile = useMediaQuery("only screen and (max-width : 800px)");
     
     return (
-        <section ref={ref} className="layoutWhite layoutWhite--profile">
-            <div className="profile-content">
-                <div className="content-box">
-                    <h1 style={{ paddingBottom: '20px', fontSize: '32px' }}>Hi, I'm Aaron 👋</h1>
-                    <h3 
-                        dangerouslySetInnerHTML={{ __html: dataProfile[0].profile.join('') }}>
-                    </h3>
-                    
-                    <div className="location-content">
-                        <a href={linkMap.url} target="_blank" rel="noopener noreferrer" className="location-info">
-                            <img src={imgLocation.source} alt="location" />
-                        </a>
-                        <a href={linkMap.url} target="_blank" rel="noopener noreferrer" className="location-info">
-                            <p>Taguig City, Philippines</p>
-                        </a>
+        <section ref={ref} className="layoutWhite">
+            {isMobile ? (
+                <article style={{height: '100vh', display: 'flex', justifyContent: 'center'}}>
+                    <div className="profile-content">
+                        <div className="image-section">
+                            <div id="rectangle" ></div>
+                            <img src={imgProfile.source} alt="profile-pic" className="profile-image" />
+                        </div>
+                        <div className="content-box">
+                            <h1 style={{ paddingBottom: '20px', fontSize: '32px' }}>Hi, I'm Aaron 👋</h1>
+                            <h3 
+                                dangerouslySetInnerHTML={{ __html: dataProfile[0].profile.join('') }}>
+                            </h3>
+                            
+                            <div className="location-content">
+                                <a href={linkMap.url} target="_blank" rel="noopener noreferrer" className="location-info">
+                                    <img src={imgLocation.source} alt="location" />
+                                </a>
+                                <a href={linkMap.url} target="_blank" rel="noopener noreferrer" className="location-info">
+                                    <p>Taguig City, Philippines</p>
+                                </a>
+                            </div>
+
+                            <div className='layout-sidebyside'>
+                                <a href={imgLinkedIn.url} target="_blank" rel="noopener noreferrer">
+                                    <img src={imgLinkedIn.source} alt="LinkedIn" />
+                                </a>
+                                <a href={imgGitHub.url} target="_blank" rel="noopener noreferrer">
+                                    <img src={imgGitHub.source} alt="GitHub" />
+                                </a>
+                            </div>
+
+                        </div>
+                        
                     </div>
 
-                    <div className='layout-sidebyside'>
-                        <a href={imgLinkedIn.url} target="_blank" rel="noopener noreferrer">
-                            <img src={imgLinkedIn.source} alt="LinkedIn" />
-                        </a>
-                        <a href={imgGitHub.url} target="_blank" rel="noopener noreferrer">
-                            <img src={imgGitHub.source} alt="GitHub" />
-                        </a>
+                    {/* <img className={`scroll-arrow ${!arrowVisible ? 'hidden' : ''}`} src={imgArrowDown.source} alt="arrowDown" /> */}
+                </article>
+            ):(
+                <article style={{height: '100vh', display: 'flex', justifyContent: 'center'}}>
+                    <div className="profile-content">
+                        <div className="content-box">
+                            <h1 style={{ paddingBottom: '20px', fontSize: '32px' }}>Hi, I'm Aaron 👋</h1>
+                            <h3 
+                                dangerouslySetInnerHTML={{ __html: dataProfile[0].profile.join('') }}>
+                            </h3>
+                            
+                            <div className="location-content">
+                                <a href={linkMap.url} target="_blank" rel="noopener noreferrer" className="location-info">
+                                    <img src={imgLocation.source} alt="location" />
+                                </a>
+                                <a href={linkMap.url} target="_blank" rel="noopener noreferrer" className="location-info">
+                                    <p>Taguig City, Philippines</p>
+                                </a>
+                            </div>
+
+                            <div className='layout-sidebyside'>
+                                <a href={imgLinkedIn.url} target="_blank" rel="noopener noreferrer">
+                                    <img src={imgLinkedIn.source} alt="LinkedIn" />
+                                </a>
+                                <a href={imgGitHub.url} target="_blank" rel="noopener noreferrer">
+                                    <img src={imgGitHub.source} alt="GitHub" />
+                                </a>
+                            </div>
+
+                        </div>
+                        <div className="image-section">
+                            <div id="rectangle" ></div>
+                            <img src={imgProfile.source} alt="profile-pic" className="profile-image" />
+                        </div>
                     </div>
 
-                </div>
-                <div className="image-section">
-                    <div id="rectangle" ></div>
-                    <img src={imgProfile.source} alt="profile-pic" className="profile-image" />
-                </div>
-            </div>
-
-            <div className={`scroll-arrow ${!arrowVisible ? 'hidden' : ''}`}>
-                <img src={imgArrowDown.source} alt="arrowDown" />
-            </div>
+                    <img className={`scroll-arrow ${!arrowVisible ? 'hidden' : ''}`} src={imgArrowDown.source} alt="arrowDown" />
+                </article>
+            )}
 
 
         </section>
