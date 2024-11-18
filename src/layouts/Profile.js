@@ -40,7 +40,7 @@ const Profile = forwardRef((props, ref) => {
                             <img src={imgProfile.source} alt="profile-pic" className="profile-image" />
                         </div>
                         <div className="content-box">
-                            <h1 style={{ paddingBottom: '20px', fontSize: '32px' }}>Hi, I'm Aaron 👋</h1>
+                            <h1 style={{ paddingBottom: '10px', fontSize: '32px' }}>Hi, I'm Aaron 👋</h1>
                             <h3 
                                 dangerouslySetInnerHTML={{ __html: dataProfile[0].profile.join('') }}>
                             </h3>

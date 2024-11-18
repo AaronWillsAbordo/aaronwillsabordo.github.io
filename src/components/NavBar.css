@@ -1,5 +1,6 @@
 /* NavBar.css */
 
+/* General NavBar Styles */
 .nav-bar {
     position: fixed;
     bottom: 20px;
@@ -43,30 +44,111 @@
     margin-right: 8px;
 }
 
-@media (max-width: 600px) {
+/* Burger Menu Styles for Mobile */
+@media (max-width: 800px) {
     .nav-bar {
+        top: 20px;
+        right: 20px;
         flex-direction: row;
-        bottom: 10px;
-        right: 50%;
-        transform: translateX(50%);
     }
 
-    .nav-bar button {
-        font-size: 10px;
-        padding: 6px 10px;
+    .burger {
+        position: relative;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        display: block;
+        z-index: 1001;
     }
 
-    .nav-bar button:hover {
+    .burger input {
+        display: none;
+    }
+
+    .burger span {
+        display: block;
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background: var(--darkFont75, black);
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: 0.25s ease-in-out;
+    }
+
+    .burger span:nth-of-type(1) {
+        top: 0px;
+        transform-origin: left center;
+    }
+
+    .burger span:nth-of-type(2) {
+        top: 50%;
+        transform: translateY(-50%);
+        transform-origin: left center;
+    }
+
+    .burger span:nth-of-type(3) {
+        top: 100%;
+        transform-origin: left center;
+        transform: translateY(-100%);
+    }
+
+    .burger input:checked ~ span:nth-of-type(1) {
+        transform: rotate(45deg);
+        top: 0px;
+        left: 5px;
+    }
+
+    .burger input:checked ~ span:nth-of-type(2) {
+        width: 0%;
+        opacity: 0;
+    }
+
+    .burger input:checked ~ span:nth-of-type(3) {
+        transform: rotate(-45deg);
+        top: 22px;
+        left: 5px;
+    }
+
+    .menu {
+        position: fixed;
+        top: 50px;
+        right: 10px;
+        background-color: var(--creamy);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 200px;
+        display: none;
+        flex-direction: column;
+        padding: 10px;
+        z-index: 1000;
+    }
+
+    .menu.visible {
+        display: flex;
+    }
+
+    .menu button {
+        background: none;
+        border: none;
+        padding: 10px 20px;
+        text-align: left;
+        width: 100%;
         font-size: 14px;
+        color: var(--darkFont75);
+        cursor: pointer;
+        transition: background 0.3s;
     }
 
-    .nav-bar button.active img {
-        transform: scale(2); 
+    .menu button:hover {
+        background: var(--lightGray, #f4f4f4);
+        color: var(--darkFont);
     }
 
-    .nav-bar img {
-        width: 14px;
-        height: 14px;
-        margin-right: 6px;
+    .menu button.active {
+        font-weight: bold;
+        color: var(--darkFont);
     }
 }
