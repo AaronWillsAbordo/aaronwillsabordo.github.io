@@ -111,6 +111,9 @@ export const dataAbout = [
 export const dataInfo = [
     {
         email: "aaronwills.abordo@gmail.com",
-        number: "+63 995 752 5916"
+        number: "+63 995 752 5916",
+        email_icon: `${process.env.PUBLIC_URL}/img/icon/email.svg`,
+        phone_icon: `${process.env.PUBLIC_URL}/img/icon/phone.svg`,
+        copy_icon: `${process.env.PUBLIC_URL}/img/icon/copy.svg`
     }
 ]

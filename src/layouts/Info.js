@@ -28,13 +28,19 @@ const Info = forwardRef((props, ref) => {
             <title>Get in touch</title>
             <h2>What’s next? Feel free to reach out to me if you’re looking for a developer, have a query, or simply want to connect.</h2>
 
-            <h6 onClick={() => copyToClipboard(dataInfo[0].email)} style={{ cursor: 'pointer' }}>
-                {dataInfo[0].email}
-            </h6>
+            <div className="info-container">
+                <div className="info-item" onClick={() => copyToClipboard(dataInfo[0].email)}>
+                    <img src={dataInfo[0].email_icon} alt="Email Icon" className="info-icon" />
+                    <h6>{dataInfo[0].email}</h6>
+                    <img src={dataInfo[0].copy_icon} alt="Copy Icon" className="info-action-icon" />
+                </div>
 
-            <h6 onClick={() => copyToClipboard(dataInfo[0].number)} style={{ cursor: 'pointer', marginLeft: '10px' }}>
-                {dataInfo[0].number}
-            </h6>
+                <div className="info-item" onClick={() => copyToClipboard(dataInfo[0].number)}>
+                    <img src={dataInfo[0].phone_icon} alt="Phone Icon" className="info-icon" />
+                    <h6>{dataInfo[0].number}</h6>
+                    <img src={dataInfo[0].copy_icon} alt="Copy Icon" className="info-action-icon" />
+                </div>
+            </div>
 
             {alertVisible && (
                 <div className="custom-alert">

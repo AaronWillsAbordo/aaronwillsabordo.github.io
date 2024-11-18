@@ -7,8 +7,9 @@ import Certificates from './layouts/Certificates.js';
 import About from './layouts/About.js';
 import Info from './layouts/Info.js';
 
+import Footer from './layouts/Footer.js';
 import NavBar from './components/NavBar';
-import WorkInProgress from './components/WorkInProgress.js';
+// import WorkInProgress from './components/WorkInProgress.js';
 
 function App() {
   const profileRef = useRef(null);
@@ -28,7 +29,8 @@ function App() {
       <Certificates ref={certificatesRef} />
       <About ref={aboutRef} />
       <Info ref={infoRef} />
-      <WorkInProgress />
+      <Footer />
+      {/* <WorkInProgress /> */}
       <NavBar 
         profileRef={profileRef} 
         experienceRef={experienceRef} 
@@ -36,6 +38,7 @@ function App() {
         workRef={workRef} 
         certificatesRef={certificatesRef}
         aboutRef={aboutRef}
+        infoRef={infoRef}
       />
     </div>
   );
