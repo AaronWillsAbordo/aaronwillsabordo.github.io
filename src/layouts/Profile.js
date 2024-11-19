@@ -1,5 +1,4 @@
 import React, { useEffect, useState, forwardRef } from 'react';
-import { useMediaQuery } from "@uidotdev/usehooks";
 import { dataProfile } from '../data/data';
 import { dataImgs } from '../data/dataImgs';
 import { dataLinks } from '../data/dataLinks';
@@ -27,12 +26,10 @@ const Profile = forwardRef((props, ref) => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-
-    const isMobile = useMediaQuery("only screen and (max-width : 800px)");
     
     return (
         <section ref={ref} className="layoutWhite">
-            {isMobile ? (
+            {props.isMobile ? (
                 <article style={{height: '100vh', display: 'flex', justifyContent: 'center'}}>
                     <div className="profile-content">
                         <div className="image-section">

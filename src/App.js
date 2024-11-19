@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Profile from './layouts/Profile.js';
 import Experience from './layouts/Experience.js';
 import Skills from './layouts/Skills.js';
@@ -20,9 +20,23 @@ function App() {
   const aboutRef = useRef(null);
   const infoRef = useRef(null);
 
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    function detectMobileDevice() {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      const mobileRegex = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+      return mobileRegex.test(userAgent);
+    }
+
+    setIsMobile(detectMobileDevice());
+  }, []);
+
   return (
     <div>
-      <Profile ref={profileRef} />
+      {/* {isMobile && <p>You are using a mobile device.</p>}
+      {!isMobile && <p>You are using a desktop device.</p>} */}
+
+      <Profile ref={profileRef} isMobile={isMobile} />
       <Experience ref={experienceRef} />
       <Skills ref={skillsRef} />
       <Work ref={workRef} />
