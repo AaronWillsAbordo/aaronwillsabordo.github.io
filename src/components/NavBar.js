@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './NavBar.css';
 
 export default function NavBar( props ) {
     const [active, setActive] = useState('');
     const [menuOpen, setMenuOpen] = useState(false);
+    const menuRef = useRef(null);
+    const burgerRef = useRef(null);
 
     const sections = [
         { ref: props.profileRef, label: 'Profile', id: 'profile' },
@@ -28,6 +30,21 @@ export default function NavBar( props ) {
         });
     };
 
+    const handleClickOutside = (event) => {
+        if (
+            menuRef.current &&
+            !menuRef.current.contains(event.target) &&
+            burgerRef.current &&
+            !burgerRef.current.contains(event.target)
+        ) {
+            setMenuOpen(false);
+        }
+    };
+
+    const toggleMenu = () => {
+        setMenuOpen((prev) => !prev);
+    };
+
     const scrollToSection = (section) => {
         if (props.isMobile) {
             props.setSelectedLayout(section.id);
@@ -43,6 +60,18 @@ export default function NavBar( props ) {
     };
 
     useEffect(() => {
+        if (menuOpen) {
+            document.addEventListener('mousedown', handleClickOutside);
+        } else {
+            document.removeEventListener('mousedown', handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [menuOpen]);
+
+    useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         handleScroll();
         return () => window.removeEventListener('scroll', handleScroll);
@@ -50,27 +79,31 @@ export default function NavBar( props ) {
 
     return (
         <nav className="nav-bar">
-        { props.isMobile ? (
-            <>
-                <div className={`burger ${menuOpen ? 'open' : ''}`} onClick={() => setMenuOpen(!menuOpen)}>
-                    <input type="checkbox" checked={menuOpen} readOnly />
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div className={`menu ${menuOpen ? 'visible' : ''}`}>
-                    {sections.map((section) => (
-                        <button
-                            key={section.id}
-                            onClick={() => scrollToSection(section)}
-                            className={active === section.id ? 'active' : ''}
-                        >
-                            {section.label}
-                        </button>
-                    ))}
-                </div>
-            </>
-            ):(
+            {props.isMobile ? (
+                <>
+                    <div
+                        className={`burger ${menuOpen ? 'open' : ''}`}
+                        onClick={toggleMenu}
+                        ref={burgerRef}
+                    >
+                        <input type="checkbox" checked={menuOpen} readOnly />
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div className={`menu ${menuOpen ? 'visible' : ''}`} ref={menuRef}>
+                        {sections.map((section) => (
+                            <button
+                                key={section.id}
+                                onClick={() => scrollToSection(section)}
+                                className={active === section.id ? 'active' : ''}
+                            >
+                                {section.label}
+                            </button>
+                        ))}
+                    </div>
+                </>
+            ) : (
                 sections.map((section) => (
                     <button
                         key={section.id}

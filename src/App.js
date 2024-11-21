@@ -37,21 +37,27 @@ function App() {
     switch (selectedLayout) {
       case 'profile':
         return <Profile ref={profileRef} isMobile={isMobile} />;
+
       case 'experience':
         // return <Experience ref={experienceRef} />;
         return <WorkInProgress />;
-        case 'skills':
-          // return <Skills ref={skillsRef} />;
-          return <WorkInProgress />;
-        case 'works':
-          // return <Work ref={workRef} />;
-          return <WorkInProgress />;
-        case 'certificates':
-          // return <Certificates ref={certificatesRef} />;
-          return <WorkInProgress />;
-        case 'about':
-          // return <About ref={aboutRef} />;
-          return <WorkInProgress />;
+
+      case 'skills':
+        // return <Skills ref={skillsRef} />;
+        return <WorkInProgress />;
+
+      case 'works':
+        // return <Work ref={workRef} />;
+        return <WorkInProgress />;
+
+      case 'certificates':
+        // return <Certificates ref={certificatesRef} />;
+        return <WorkInProgress />;
+
+      case 'about':
+        // return <About ref={aboutRef} />;
+        return <WorkInProgress />;
+
       case 'info':
         return (
             <>
@@ -59,6 +65,7 @@ function App() {
               <Footer />
             </>
           );
+          
       default:
         return <Profile ref={profileRef} isMobile={isMobile} />;
     }
