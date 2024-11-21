@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
+
 import Profile from './layouts/Profile.js';
 import Experience from './layouts/Experience.js';
 import Skills from './layouts/Skills.js';
@@ -9,7 +10,7 @@ import Info from './layouts/Info.js';
 
 import Footer from './layouts/Footer.js';
 import NavBar from './components/NavBar';
-// import WorkInProgress from './components/WorkInProgress.js';
+import WorkInProgress from './components/WorkInProgress.js';
 
 function App() {
   const profileRef = useRef(null);
@@ -21,6 +22,7 @@ function App() {
   const infoRef = useRef(null);
 
   const [isMobile, setIsMobile] = useState(false);
+  const [selectedLayout, setSelectedLayout] = useState('profile');
   useEffect(() => {
     function detectMobileDevice() {
       const userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -31,19 +33,56 @@ function App() {
     setIsMobile(detectMobileDevice());
   }, []);
 
+  const renderLayout = () => {
+    switch (selectedLayout) {
+      case 'profile':
+        return <Profile ref={profileRef} isMobile={isMobile} />;
+      case 'experience':
+        // return <Experience ref={experienceRef} />;
+        return <WorkInProgress />;
+        case 'skills':
+          // return <Skills ref={skillsRef} />;
+          return <WorkInProgress />;
+        case 'works':
+          // return <Work ref={workRef} />;
+          return <WorkInProgress />;
+        case 'certificates':
+          // return <Certificates ref={certificatesRef} />;
+          return <WorkInProgress />;
+        case 'about':
+          // return <About ref={aboutRef} />;
+          return <WorkInProgress />;
+      case 'info':
+        return (
+            <>
+              <Info ref={infoRef} />
+              <Footer />
+            </>
+          );
+      default:
+        return <Profile ref={profileRef} isMobile={isMobile} />;
+    }
+  };
+
   return (
     <div>
-      {/* {isMobile && <p>You are using a mobile device.</p>}
-      {!isMobile && <p>You are using a desktop device.</p>} */}
+      {isMobile ? (
+        <>
+          {renderLayout()}
+        </>
+      ) : (
+        <>
+          <Profile ref={profileRef} />
+          <Experience ref={experienceRef} />
+          <Skills ref={skillsRef} />
+          <Work ref={workRef} />
+          <Certificates ref={certificatesRef} />
+          <About ref={aboutRef} />
+          <Info ref={infoRef} />
+          <Footer />
+        </>
+      )}
 
-      <Profile ref={profileRef} isMobile={isMobile} />
-      <Experience ref={experienceRef} />
-      <Skills ref={skillsRef} />
-      <Work ref={workRef} />
-      <Certificates ref={certificatesRef} />
-      <About ref={aboutRef} />
-      <Info ref={infoRef} />
-      <Footer />
       {/* <WorkInProgress /> */}
       <NavBar 
         profileRef={profileRef} 
@@ -53,6 +92,8 @@ function App() {
         certificatesRef={certificatesRef}
         aboutRef={aboutRef}
         infoRef={infoRef}
+        isMobile={isMobile}
+        setSelectedLayout={setSelectedLayout}
       />
     </div>
   );

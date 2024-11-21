@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { useMediaQuery } from "@uidotdev/usehooks";
 import './NavBar.css';
 
-export default function NavBar({ profileRef, skillsRef, experienceRef, workRef, certificatesRef, aboutRef, infoRef }) {
+export default function NavBar( props ) {
     const [active, setActive] = useState('');
     const [menuOpen, setMenuOpen] = useState(false);
-    const isMobile = useMediaQuery("only screen and (max-width : 800px)");
 
     const sections = [
-        { ref: profileRef, label: 'Profile', id: 'profile' },
-        { ref: experienceRef, label: 'Experience', id: 'experience' },
-        { ref: skillsRef, label: 'Skills', id: 'skills' },
-        { ref: workRef, label: 'Works', id: 'works' },
-        { ref: certificatesRef, label: 'Certificates', id: 'certificates' },
-        { ref: aboutRef, label: 'About', id: 'about' },
-        { ref: infoRef, label: 'Info', id: 'info' },
+        { ref: props.profileRef, label: 'Profile', id: 'profile' },
+        { ref: props.experienceRef, label: 'Experience', id: 'experience' },
+        { ref: props.skillsRef, label: 'Skills', id: 'skills' },
+        { ref: props.workRef, label: 'Works', id: 'works' },
+        { ref: props.certificatesRef, label: 'Certificates', id: 'certificates' },
+        { ref: props.aboutRef, label: 'About', id: 'about' },
+        { ref: props.infoRef, label: 'Info', id: 'info' },
     ];
 
     const handleScroll = () => {
@@ -30,12 +28,18 @@ export default function NavBar({ profileRef, skillsRef, experienceRef, workRef, 
         });
     };
 
-    const scrollToSection = (elementRef) => {
-        window.scrollTo({
-            top: elementRef.current.offsetTop,
-            behavior: 'smooth',
-        });
-        setMenuOpen(false);
+    const scrollToSection = (section) => {
+        if (props.isMobile) {
+            props.setSelectedLayout(section.id);
+            setMenuOpen(false);
+        } else {
+            window.scrollTo({
+                top: section.current.offsetTop,
+                behavior: 'smooth',
+            });
+            setMenuOpen(false);
+        }
+        setActive(section.id);
     };
 
     useEffect(() => {
@@ -46,7 +50,7 @@ export default function NavBar({ profileRef, skillsRef, experienceRef, workRef, 
 
     return (
         <nav className="nav-bar">
-        { isMobile ? (
+        { props.isMobile ? (
             <>
                 <div className={`burger ${menuOpen ? 'open' : ''}`} onClick={() => setMenuOpen(!menuOpen)}>
                     <input type="checkbox" checked={menuOpen} readOnly />
@@ -58,7 +62,7 @@ export default function NavBar({ profileRef, skillsRef, experienceRef, workRef, 
                     {sections.map((section) => (
                         <button
                             key={section.id}
-                            onClick={() => scrollToSection(section.ref)}
+                            onClick={() => scrollToSection(section)}
                             className={active === section.id ? 'active' : ''}
                         >
                             {section.label}
@@ -67,8 +71,7 @@ export default function NavBar({ profileRef, skillsRef, experienceRef, workRef, 
                 </div>
             </>
             ):(
-            <>
-                {sections.map((section) => (
+                sections.map((section) => (
                     <button
                         key={section.id}
                         onClick={() => scrollToSection(section.ref)}
@@ -77,8 +80,7 @@ export default function NavBar({ profileRef, skillsRef, experienceRef, workRef, 
                         <img src={`/img/icon/${section.id}.svg`} alt={`${section.label} icon`} />
                         {section.label}
                     </button>
-                ))}
-            </>
+                ))
             )}
         </nav>
     );
