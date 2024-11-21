@@ -65,7 +65,7 @@ function App() {
   };
 
   return (
-    <div>
+    <>
       {isMobile ? (
         <>
           {renderLayout()}
@@ -95,7 +95,7 @@ function App() {
         isMobile={isMobile}
         setSelectedLayout={setSelectedLayout}
       />
-    </div>
+    </>
   );
 }
 
