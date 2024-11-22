@@ -39,7 +39,7 @@ function App() {
         return <Profile ref={profileRef} isMobile={isMobile} />;
 
       case 'experience':
-        // return <Experience ref={experienceRef} />;
+        return <Experience ref={experienceRef} isMobile={isMobile} />;
         return <WorkInProgress />;
 
       case 'skills':
