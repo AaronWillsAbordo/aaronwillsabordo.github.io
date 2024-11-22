@@ -40,11 +40,10 @@ function App() {
 
       case 'experience':
         return <Experience ref={experienceRef} isMobile={isMobile} />;
-        return <WorkInProgress />;
 
       case 'skills':
-        // return <Skills ref={skillsRef} />;
-        return <WorkInProgress />;
+        return <Skills ref={skillsRef} isMobile={isMobile} />;
+        // return <WorkInProgress />;
 
       case 'works':
         // return <Work ref={workRef} />;

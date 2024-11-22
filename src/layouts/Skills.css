@@ -1,8 +1,9 @@
 .skills-grid {
     display: flex;
     flex-direction: column;
-    gap: 50px;
-    width: 850px;
+    gap: 30px;
+    width: 100%;
+    max-width: 850px;
     text-align: center;
     justify-items: center;
 }
