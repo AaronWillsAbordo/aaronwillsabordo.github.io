@@ -76,7 +76,7 @@ export const dataProfile = [
         profile: [`
             I’m a <strong>Software Engineer</strong> with expertise in <strong>Python</strong>
             , <strong>.NET</strong>, <strong>React</strong>, and <strong>data analytics</strong>, 
-            dedicated to building efficient, scalable solutions. 
+            dedicated to building efficient and scalable solutions. 
             I’m also passionate about creating impactful software 
             and exploring <strong>AI technologies</strong>. Eager to contribute to a challenging 
             and collaborative environment where I can continuously learn and grow.
