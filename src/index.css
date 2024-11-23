@@ -83,7 +83,8 @@ h2 {
   font-weight: 400;
   line-height: normal;
 
-  width: 100vw;
+  width: auto; 
+  /* 100vw; */
   height: 45px;
   flex-shrink: 0;
 }
