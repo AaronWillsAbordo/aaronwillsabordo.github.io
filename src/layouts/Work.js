@@ -18,7 +18,7 @@ const Work = forwardRef((props, ref) => {
                 <div key={project.id} className="work-container">
                     <div className="work-column-left">
                         {project.imgs && project.imgs.length > 0 ? (
-                            <EmblaCarousel slides={project.imgs} options={{loop: true}} />
+                            <EmblaCarousel slides={project.imgs} options={{loop: true}} isMobile={props.isMobile} />
                         ) : (
                             <p>No images available for this project.</p>
                         )}

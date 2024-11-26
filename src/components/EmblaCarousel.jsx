@@ -9,7 +9,7 @@ import Autoplay from 'embla-carousel-autoplay'
 import useEmblaCarousel from 'embla-carousel-react'
 
 const EmblaCarousel = (props) => {
-  const { slides, options } = props
+  const { slides, options, isMobile } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()])
 
   const onNavButtonClick = useCallback((emblaApi) => {
@@ -37,23 +37,25 @@ const EmblaCarousel = (props) => {
   } = usePrevNextButtons(emblaApi, onNavButtonClick)
 
   return (
-    <section className="embla" >
+    <section 
+      className="embla" 
+      style={isMobile ? { '--slide-size': '75%' } : {}}
+    >
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((source, index) => (
             <div className="embla__slide" key={index}>
-              <img src={`${process.env.PUBLIC_URL}${source}`} alt={`Slide ${index + 1}`} className="embla__slide__number" />
+              <img 
+                src={`${process.env.PUBLIC_URL}${source}`} 
+                alt={`Slide ${index + 1}`} 
+                className="embla__slide__number" 
+              />
             </div>
           ))}
         </div>
       </div>
 
       <div className="embla__controls">
-        <div className="embla__buttons">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-        </div>
-
         <div className="embla__dots">
           {scrollSnaps.map((_, index) => (
             <DotButton
@@ -65,6 +67,12 @@ const EmblaCarousel = (props) => {
             />
           ))}
         </div>
+        
+        <div className="embla__buttons">
+          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+        </div>
+
       </div>
     </section>
   )
