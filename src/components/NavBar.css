@@ -47,15 +47,22 @@
 /* Burger Menu Styles for Mobile */
 @media (max-width: 800px) {
     .nav-bar {
-        top: 20px;
-        right: 20px;
+        bottom: 5%;
+        right: 10%;
         flex-direction: row;
+        background-color: var(--primaryColor, var(--creamy));
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 50%;
+
+        width: 70px; /* Adjust size for circle */
+        height: 70px; /* Equal to width for a perfect circle */
     }
 
     .burger {
         position: relative;
-        width: 30px;
-        height: 20px;
+        width: 40px;
+        height: 30px;
+        transform: translate(40%, 65%);
         cursor: pointer;
         display: block;
         z-index: 1001;
@@ -69,11 +76,13 @@
         display: block;
         position: absolute;
         height: 4px;
-        width: 100%;
-        background: var(--darkFont75, black);
+        width: 100%; /* Adjust width relative to the circle size */
+        left: 0;
+
+        background: var(--darkFont, black);
         border-radius: 9px;
         opacity: 1;
-        left: 0;
+
         transform: rotate(0deg);
         transition: 0.25s ease-in-out;
     }
@@ -108,14 +117,14 @@
 
     .burger input:checked ~ span:nth-of-type(3) {
         transform: rotate(-45deg);
-        top: 22px;
+        top: 27px;
         left: 5px;
     }
 
     .menu {
         position: fixed;
-        top: 50px;
-        right: 10px;
+        bottom: 17%;
+        right: 10%;
         background-color: var(--creamy);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 8px;

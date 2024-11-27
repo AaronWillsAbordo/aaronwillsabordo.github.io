@@ -50,8 +50,8 @@ function App() {
         // return <WorkInProgress />;
 
       case 'certificates':
-        // return <Certificates ref={certificatesRef} isMobile={isMobile} />;
-        return <WorkInProgress />;
+        return <Certificates ref={certificatesRef} isMobile={isMobile} />;
+        // return <WorkInProgress />;
 
       case 'about':
         // return <About ref={aboutRef} isMobile={isMobile} />;
