@@ -14,34 +14,74 @@ const Work = forwardRef((props, ref) => {
             <title>Work</title>
             <h2>Some of the noteworthy projects I have built:</h2>
 
-            {dataWork.work.map((project) => (
-                <div key={project.id} className="work-container">
-                    <div className="work-column-left">
-                        {project.imgs && project.imgs.length > 0 ? (
-                            <EmblaCarousel slides={project.imgs} options={{loop: true}} isMobile={props.isMobile} />
-                        ) : (
-                            <p>No images available for this project.</p>
-                        )}
-                    </div>
-                    <div className="work-column-right">
-                        <h1>{project.title}</h1>
-                        <p>
-                            <ReactMarkdown>
-                                {project.description.join('\n')}
-                            </ReactMarkdown>
-                        </p>
-                        <div className="skills-container">
-                            {project.skills.map((skill, index) => (
-                                <span key={index} className="skill-box">{skill}</span>
-                            ))}
+            {props.isMobile ? 
+            (
+                <>
+                    {dataWork.work.map((project) => (
+                        <div key={project.id} className="work-container" style={{flexDirection:'column', width: '100%', padding: '10px'}}>
+                            <div className="work-column-left" style={{width:'100%', height: '100%', marginBottom: '20px'}}>
+                                {project.imgs && project.imgs.length > 0 ? (
+                                    <EmblaCarousel slides={project.imgs} options={{loop: true}} isMobile={props.isMobile} />
+                                ) : (
+                                    <p>No images available for this project.</p>
+                                )}
+                            </div>
+                            <div className="work-column-right" style={{width: '100%'}}>
+                                <h1>{project.title}</h1>
+                                <p>
+                                    <ReactMarkdown>
+                                        {project.description.join('\n')}
+                                    </ReactMarkdown>
+                                </p>
+                                <div className="skills-container">
+                                    {project.skills.map((skill, index) => (
+                                        <span key={index} className="skill-box">{skill}</span>
+                                    ))}
+                                </div>
+                                <a href={project.link} target="_blank" rel="noopener noreferrer" className="goto-box" style={{marginTop: '15px'}} >
+                                    {project.category === "repo" ? "Goto repo" : "See project"}
+                                    <img src={imgGoto.source} alt="Go to project" className="goto-icon" />
+                                </a>
+                            </div>
                         </div>
-                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="goto-box" style={{marginTop: '15px'}} >
-                            {project.category === "repo" ? "Goto repo" : "See project"}
-                            <img src={imgGoto.source} alt="Go to project" className="goto-icon" />
-                        </a>
-                    </div>
-                </div>
-            ))}
+                    ))}
+                </>   
+            )
+            :
+            (
+                <>
+                    {dataWork.work.map((project) => (
+                        <div key={project.id} className="work-container">
+                            <div className="work-column-left">
+                                {project.imgs && project.imgs.length > 0 ? (
+                                    <EmblaCarousel slides={project.imgs} options={{loop: true}} isMobile={props.isMobile} />
+                                ) : (
+                                    <p>No images available for this project.</p>
+                                )}
+                            </div>
+                            <div className="work-column-right">
+                                <h1>{project.title}</h1>
+                                <p>
+                                    <ReactMarkdown>
+                                        {project.description.join('\n')}
+                                    </ReactMarkdown>
+                                </p>
+                                <div className="skills-container">
+                                    {project.skills.map((skill, index) => (
+                                        <span key={index} className="skill-box">{skill}</span>
+                                    ))}
+                                </div>
+                                <a href={project.link} target="_blank" rel="noopener noreferrer" className="goto-box" style={{marginTop: '15px'}} >
+                                    {project.category === "repo" ? "Goto repo" : "See project"}
+                                    <img src={imgGoto.source} alt="Go to project" className="goto-icon" />
+                                </a>
+                            </div>
+                        </div>
+                    ))}
+                </>
+            )
+            }
+
 
         </section>
     );

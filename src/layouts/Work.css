@@ -27,24 +27,3 @@
     justify-content: center;
     align-items: center; */
 }
-
-/* Mobile layout */
-@media (max-width: 768px) {
-    .work-container {
-        flex-direction: column;
-        width: 100%;
-        padding: 10px;
-    }
-
-    .work-column-left {
-        width: 100%;
-        max-width: 350px;
-        height: 100%;
-        max-height: 400px;
-        margin-bottom: 20px;
-    }
-
-    .work-column-right {
-        width: 100%;
-    }
-}
