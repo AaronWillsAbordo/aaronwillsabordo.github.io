@@ -78,11 +78,11 @@ export default function NavBar( props ) {
     }, []);
 
     return (
-        <nav className="nav-bar">
-            {props.isMobile ? (
-                <>
+        // <>
+            props.isMobile ? (
+                <nav className="nav-bar-mobile">
                     <div
-                        className={`burger ${menuOpen ? 'open' : ''}`}
+                        className={`burger-mobile ${menuOpen ? 'open' : ''}`}
                         onClick={toggleMenu}
                         ref={burgerRef}
                     >
@@ -91,7 +91,7 @@ export default function NavBar( props ) {
                         <span></span>
                         <span></span>
                     </div>
-                    <div className={`menu ${menuOpen ? 'visible' : ''}`} ref={menuRef}>
+                    <div className={`menu-mobile ${menuOpen ? 'visible' : ''}`} ref={menuRef}>
                         {sections.map((section) => (
                             <button
                                 key={section.id}
@@ -102,19 +102,21 @@ export default function NavBar( props ) {
                             </button>
                         ))}
                     </div>
-                </>
+                </nav>
             ) : (
-                sections.map((section) => (
-                    <button
+                <nav className="nav-bar">
+                    {sections.map((section) => (
+                        <button
                         key={section.id}
                         onClick={() => scrollToSection(section.ref)}
                         className={active === section.id ? 'active' : ''}
-                    >
-                        <img src={`/img/icon/${section.id}.svg`} alt={`${section.label} icon`} />
-                        {section.label}
-                    </button>
-                ))
-            )}
-        </nav>
+                        >
+                            <img src={`/img/icon/${section.id}.svg`} alt={`${section.label} icon`} />
+                            {section.label}
+                        </button>
+                    ))}
+                </nav>
+            )
+        // </>
     );
 }

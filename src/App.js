@@ -60,7 +60,7 @@ function App() {
       case 'info':
         return (
             <>
-              <Info ref={infoRef} />
+              <Info ref={infoRef} isMobile={isMobile} style={isMobile ? { maxHeight: '100vh' } : {}} />
               <Footer />
             </>
           );

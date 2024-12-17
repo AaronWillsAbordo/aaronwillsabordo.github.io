@@ -18,7 +18,7 @@ const Work = forwardRef((props, ref) => {
             (
                 <>
                     {dataWork.work.map((project) => (
-                        <div key={project.id} className="work-container" style={{flexDirection:'column', width: '100%', padding: '10px'}}>
+                        <div key={project.id} className="work-container" style={{flexDirection:'column', width: '100%', padding: '10px', maxWidth: '370px'}}>
                             <div className="work-column-left" style={{width:'100%', height: '100%', marginBottom: '20px'}}>
                                 {project.imgs && project.imgs.length > 0 ? (
                                     <EmblaCarousel slides={project.imgs} options={{loop: true}} isMobile={props.isMobile} />
