@@ -54,8 +54,8 @@ function App() {
         // return <WorkInProgress />;
 
       case 'about':
-        // return <About ref={aboutRef} isMobile={isMobile} />;
-        return <WorkInProgress />;
+        return <About ref={aboutRef} isMobile={isMobile} />;
+        // return <WorkInProgress />;
 
       case 'info':
         return (

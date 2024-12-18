@@ -33,7 +33,7 @@ const Profile = forwardRef((props, ref) => {
                 <article style={{height: '100vh', display: 'flex', justifyContent: 'center'}}>
                     <div className="profile-content">
                         <div className="image-section">
-                            <div id="rectangle" ></div>
+                            {/* <div id="rectangle" ></div> */}
                             <img src={imgProfile.source} alt="profile-pic" className="profile-image" />
                         </div>
                         <div className="content-box">
@@ -63,8 +63,7 @@ const Profile = forwardRef((props, ref) => {
                         </div>
                         
                     </div>
-
-                    {/* <img className={`scroll-arrow ${!arrowVisible ? 'hidden' : ''}`} src={imgArrowDown.source} alt="arrowDown" /> */}
+                    <img className={`scroll-arrow ${!arrowVisible ? 'hidden' : ''}`} style={{rotate: '-90deg', bottom: '10%', left: '60%'}} src={imgArrowDown.source} alt="arrowDown" />
                 </article>
             ):(
                 <article style={{height: '100vh', display: 'flex', justifyContent: 'center'}}>
