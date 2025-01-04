@@ -15,11 +15,11 @@ export const dataImgs = [
     },
     {
         name: 'profile',
-        source: `${process.env.PUBLIC_URL}/img/photo/profile.jpg`
+        source: `${process.env.PUBLIC_URL}/img/photo/profile_pic.jpg`
     },
     {
         name: 'profile2',
-        source: `${process.env.PUBLIC_URL}/img/photo/portrait_sampler.jpg`
+        source: `${process.env.PUBLIC_URL}/img/photo/about_pic.jpg`
     },
     {
         name: 'arrowDown',

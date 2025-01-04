@@ -23,7 +23,7 @@ h3 > about-right-column {
     justify-content: center;
     align-items: center;
     width: auto;
-    max-width: 300px;
+    max-width: 254px;
     height: auto;
     max-height: 400px;
     border: 20px solid var(--cream, #ffffff);
@@ -37,7 +37,7 @@ h3 > about-right-column {
     height: 20rem;
     background-color: var(--gray);
     position: absolute;
-    transform: translateX(-30px) translateY(-470px);
+    transform: translateX(-30px) translateY(-408px);
     z-index: 0;
 }
 
