@@ -1,25 +1,21 @@
 .skills-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
     width: 100%;
     max-width: 850px;
-    text-align: center;
     justify-items: center;
 }
 
 .skills-row {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    grid-template-columns: repeat(5, auto);
     grid-gap: 50px 100px;
-    justify-items: center;
-    align-items: center;
+    height: 150px;
 }
 
-.skills-row.last-row {
+.skills-row-last {
     display: grid;
-    grid-template-columns: 50px 130px 50px;
-    justify-content: center;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 50px 100px; 
+    height: 150px;
 }
 
 .skills-mobile {

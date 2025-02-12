@@ -40,6 +40,10 @@
         "name": "Google Cloud",
         "path": "/img/logo/devicon_googlecloud.svg"
     },{
+        "id": "azure",
+        "name": "Azure",
+        "path": "/img/logo/devicon_azure.svg"
+    },{
         "id": "jira",
         "name": "Jira",
         "path": "/img/logo/jira.svg"

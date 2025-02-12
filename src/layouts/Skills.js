@@ -58,7 +58,7 @@ const Skills = forwardRef((props, ref) => {
                         {[firstRow, secondRow, thirdRow].map((row, index) => (
                             <div 
                                 key={index} 
-                                className={`skills-row ${index === 2 ? 'last-row' : ''}`} 
+                                className={`skills-row${index === 2 ? '-last' : ''}`} 
                                 style={props.isMobile ? { gridGap: '10px 10px' } : undefined}
                             >
                                 {row.map((skill) => (
