@@ -1,12 +1,20 @@
 {
     "certificates": [
     {
+        "id": "6",
+        "title": "Learn React Course",
+        "schoolName": "Codecademy",
+        "skillsArray": ["React", "JavaScript", "Front-end Web Development"],
+        "logo": "/img/logo/codecademy.png",
+        "link": "https://www.codecademy.com/profiles/AWills987/certificates/af00e5032d0a68cc84879983f5d8333b"
+    },
+    {
         "id": "5",
         "title": "Intro to PyTorch and Neural Networks Course",
         "schoolName": "Codecademy",
         "skillsArray": ["PyTorch", "Neural Networks"],
         "logo": "/img/logo/codecademy.png",
-        "link": "https://drive.google.com/file/d/13WOBP6Q1puY6lKbBtvFXqYHa7cLeCUhn/view?usp=drive_link"
+        "link": "https://www.codecademy.com/profiles/AWills987/certificates/6ae1628539a94211a0023482d755ec7d"
     },
     {
         "id": "4",
