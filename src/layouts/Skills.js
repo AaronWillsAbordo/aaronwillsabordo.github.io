@@ -17,19 +17,11 @@ const Skills = forwardRef((props, ref) => {
             return acc;
         }, []).map((group, groupIndex) => {
             const gridStyle = {
-                display: 'grid',
-                gap: '20px',
-                justifyContent: 'center',
-                justifyItems: 'center',
-                alignItems: 'center',
-                width: '100%',
-                padding: '10px',
-                boxSizing: 'border-box',
                 gridTemplateColumns: group.length === 1
                     ? '1fr'
                     : group.length === 2
-                    ? 'repeat(2, minmax(40%, 1fr))'
-                    : 'repeat(3, minmax(30%, 1fr))',
+                    ? 'repeat(2, 35%)'
+                    : 'repeat(3, minmax(25%, 1fr))',
             };
     
             return (
