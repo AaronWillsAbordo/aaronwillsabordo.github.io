@@ -4,7 +4,7 @@ import './Footer.css';
 const Footer = () => {
     return (
         <footer className="footer">
-            <p>2024 | Developed and designed with ❤️ by Aaron Wills Abordo</p>
+            <p>2025 | Developed and designed with ❤️ by Aaron Wills Abordo</p>
         </footer>
     );
 };
