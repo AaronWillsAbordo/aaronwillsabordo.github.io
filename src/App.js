@@ -70,6 +70,29 @@ function App() {
     }
   };
 
+  //region CHATBOT;
+  const [userInput, setUserInput] = useState('');
+  const [botResponse, setBotResponse] = useState('');
+  const handleSendMessage = async () => {
+    if (!userInput.trim()) return;
+
+    try {
+      const res = await fetch('http://127.0.0.1:8000/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ message: userInput })
+      });
+      const data = await res.json();
+      setBotResponse(data.response || 'No response');
+    } catch (error) {
+      console.error('Error talking to chatbot:', error);
+      setBotResponse('Error connecting to chatbot');
+    }
+  };
+  //endregion CHATBOT
+
   return (
     <>
       {isMobile ? (
@@ -86,6 +109,25 @@ function App() {
           <About ref={aboutRef} />
           <Info ref={infoRef} />
           <Footer />
+
+          {/* <ChatBot /> */}
+          <div style={{ padding: '2rem', backgroundColor: '#f5f5f5' }}>
+            <h3>Chatbot Test</h3>
+            <input
+              type="text"
+              value={userInput}
+              onChange={(e) => setUserInput(e.target.value)}
+              placeholder="Type a message"
+              style={{ padding: '0.5rem', width: '300px', marginRight: '1rem' }}
+            />
+            <button onClick={handleSendMessage} style={{ padding: '0.5rem 1rem' }}>
+              Send
+            </button>
+            <div style={{ marginTop: '1rem' }}>
+              <strong>Bot says:</strong> {botResponse}
+            </div>
+          </div>
+          {/* <ChatBot /> */}
         </>
       )}
 

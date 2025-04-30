@@ -166,6 +166,7 @@ cython_debug/
 /node_modules
 /.pnp
 .pnp.js
+/src/services/venv_services
 
 # testing
 /coverage
