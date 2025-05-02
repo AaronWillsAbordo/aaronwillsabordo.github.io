@@ -1,7 +1,7 @@
 .nav-bar {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 1%;
+    left: 1%;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -44,7 +44,7 @@
 /* Burger Menu Styles for Mobile */
     .nav-bar-mobile {
         position: fixed;
-        bottom: 5%;
+        top: 5%;
         right: 10%;
         /* display: flex;
         flex-direction: column; */
@@ -122,7 +122,7 @@
 
     .menu-mobile {
         position: fixed;
-        bottom: 17%;
+        top: 17%;
         right: 10%;
         background-color: var(--creamy);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
