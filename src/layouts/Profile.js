@@ -33,8 +33,7 @@ const Profile = forwardRef((props, ref) => {
                 <article style={{height: '100vh', display: 'flex', justifyContent: 'center'}}>
                     <div className="profile-content">
                         <div className="image-section">
-                            {/* <div id="rectangle" ></div> */}
-                            <img src={imgProfile.source} alt="profile-pic" className="profile-image" />
+                            <img src={imgProfile.source} alt="profile-pic" className="profile-image"  style={{ left: '-22%' }} />
                         </div>
                         <div className="content-box">
                             <h1 style={{ paddingBottom: '10px', fontSize: '32px' }}>Hi, I'm Aaron 👋</h1>
@@ -63,7 +62,7 @@ const Profile = forwardRef((props, ref) => {
                         </div>
                         
                     </div>
-                    <img className={`scroll-arrow ${!arrowVisible ? 'hidden' : ''}`} style={{rotate: '-90deg', bottom: '10%', left: '60%'}} src={imgArrowDown.source} alt="arrowDown" />
+                    <img className={`scroll-arrow ${!arrowVisible ? 'hidden' : ''}`} style={{rotate: '-90deg', top: '2.5%', left: '60%'}} src={imgArrowDown.source} alt="arrowDown" />
                 </article>
             ):(
                 <article style={{height: '100vh', display: 'flex', justifyContent: 'center'}}>
