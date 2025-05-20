@@ -10,7 +10,8 @@ import Info from './layouts/Info.js';
 
 import Footer from './layouts/Footer.js';
 import NavBar from './components/NavBar';
-import WorkInProgress from './components/WorkInProgress.js';
+import ChatBot from './components/ChatBot';
+// import WorkInProgress from './components/WorkInProgress.js';
 
 function App() {
   const profileRef = useRef(null);
@@ -43,19 +44,15 @@ function App() {
 
       case 'skills':
         return <Skills ref={skillsRef} isMobile={isMobile} />;
-        // return <WorkInProgress />;
 
       case 'works':
         return <Work ref={workRef} isMobile={isMobile} />;
-        // return <WorkInProgress />;
 
       case 'certificates':
         return <Certificates ref={certificatesRef} isMobile={isMobile} />;
-        // return <WorkInProgress />;
 
       case 'about':
         return <About ref={aboutRef} isMobile={isMobile} />;
-        // return <WorkInProgress />;
 
       case 'info':
         return (
@@ -69,29 +66,6 @@ function App() {
         return <Profile ref={profileRef} isMobile={isMobile} />;
     }
   };
-
-  //region CHATBOT;
-  const [userInput, setUserInput] = useState('');
-  const [botResponse, setBotResponse] = useState('');
-  const handleSendMessage = async () => {
-    if (!userInput.trim()) return;
-
-    try {
-      const res = await fetch('http://127.0.0.1:8000/chat', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ message: userInput })
-      });
-      const data = await res.json();
-      setBotResponse(data.response || 'No response');
-    } catch (error) {
-      console.error('Error talking to chatbot:', error);
-      setBotResponse('Error connecting to chatbot');
-    }
-  };
-  //endregion CHATBOT
 
   return (
     <>
@@ -109,25 +83,6 @@ function App() {
           <About ref={aboutRef} />
           <Info ref={infoRef} />
           <Footer />
-
-          {/* <ChatBot /> */}
-          <div style={{ padding: '2rem', backgroundColor: '#f5f5f5' }}>
-            <h3>Chatbot Test</h3>
-            <input
-              type="text"
-              value={userInput}
-              onChange={(e) => setUserInput(e.target.value)}
-              placeholder="Type a message"
-              style={{ padding: '0.5rem', width: '300px', marginRight: '1rem' }}
-            />
-            <button onClick={handleSendMessage} style={{ padding: '0.5rem 1rem' }}>
-              Send
-            </button>
-            <div style={{ marginTop: '1rem' }}>
-              <strong>Bot says:</strong> {botResponse}
-            </div>
-          </div>
-          {/* <ChatBot /> */}
         </>
       )}
 
@@ -143,6 +98,7 @@ function App() {
         isMobile={isMobile}
         setSelectedLayout={setSelectedLayout}
       />
+      <ChatBot isMobile={isMobile} />
     </>
   );
 }
