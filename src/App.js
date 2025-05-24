@@ -10,7 +10,8 @@ import Info from './layouts/Info.js';
 
 import Footer from './layouts/Footer.js';
 import NavBar from './components/NavBar';
-import WorkInProgress from './components/WorkInProgress.js';
+import ChatBot from './components/ChatBot';
+// import WorkInProgress from './components/WorkInProgress.js';
 
 function App() {
   const profileRef = useRef(null);
@@ -43,19 +44,15 @@ function App() {
 
       case 'skills':
         return <Skills ref={skillsRef} isMobile={isMobile} />;
-        // return <WorkInProgress />;
 
       case 'works':
         return <Work ref={workRef} isMobile={isMobile} />;
-        // return <WorkInProgress />;
 
       case 'certificates':
         return <Certificates ref={certificatesRef} isMobile={isMobile} />;
-        // return <WorkInProgress />;
 
       case 'about':
         return <About ref={aboutRef} isMobile={isMobile} />;
-        // return <WorkInProgress />;
 
       case 'info':
         return (
@@ -101,6 +98,7 @@ function App() {
         isMobile={isMobile}
         setSelectedLayout={setSelectedLayout}
       />
+      <ChatBot isMobile={isMobile} />
     </>
   );
 }
