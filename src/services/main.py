@@ -15,12 +15,10 @@ app.add_middleware(
 async def chat_endpoint(req: Request):
     data = await req.json()
     user_message = data["message"]
-    
-    # Example: simple response
     bot_response = my_model_generate_response(user_message)
     
     return {"response": bot_response}
 
 def my_model_generate_response(message):
-    # Replace with your actual model logic
-    return f"{message}"
+    # Replace with actual model logic
+    return f"Returned: {message}"

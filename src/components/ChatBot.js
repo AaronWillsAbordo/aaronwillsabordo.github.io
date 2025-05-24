@@ -91,8 +91,8 @@ export default function ChatBot ( props ) {
             </button>
             {isOpen && (
                 <div className="chatbot-window" ref={chatWindowRef} >
-                    <WorkInProgress />
-                    {/* <div className="chatbot-messages" ref={chatRef}>
+                    {/* <WorkInProgress /> */}
+                    <div className="chatbot-messages" ref={chatRef}>
                         {history.map((msg, index) => (
                             <div key={index} className={`message ${msg.messenger}`}>
                                 {msg.text}
@@ -108,7 +108,7 @@ export default function ChatBot ( props ) {
                             placeholder="Type a message..."
                         />
                         <button onClick={handleSendMessage}>Send</button>
-                    </div> */}
+                    </div>
                 </div>
             )}
         </div>
