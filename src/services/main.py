@@ -1,5 +1,6 @@
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
+from chatbot import Chatbot 
 
 app = FastAPI()
 
@@ -15,10 +16,8 @@ app.add_middleware(
 async def chat_endpoint(req: Request):
     data = await req.json()
     user_message = data["message"]
-    bot_response = my_model_generate_response(user_message)
-    
+    chatbot = Chatbot()
+    chatbot.load_model("chatbot_model.pkl")
+    bot_response = chatbot.generate_response(user_message)
     return {"response": bot_response}
 
-def my_model_generate_response(message):
-    # Replace with actual model logic
-    return f"Returned: {message}"
