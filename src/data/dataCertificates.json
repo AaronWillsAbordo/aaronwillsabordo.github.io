@@ -30,7 +30,7 @@
         "schoolName": "freeCodeCamp",
         "skillsArray": ["Python", "Scientific Computing", "Object-Oriented Programming (OOP)", "Data Structures", "Algorithms"],
         "logo": "/img/logo/freecodecamp.png",
-        "link": "https://www.freecodecamp.org/certification/RenTathamet/scientific-computing-with-python-v7"
+        "link": "https://www.freecodecamp.org/certification/rentathamet/scientific-computing-with-python-v7"
     },
     {
         "id": "3",
