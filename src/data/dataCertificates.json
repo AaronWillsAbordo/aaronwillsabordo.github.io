@@ -1,6 +1,14 @@
 {
     "certificates": [
     {
+        "id": "7",
+        "title": "Build Chatbots with Python Skill Path",
+        "schoolName": "Codecademy",
+        "skillsArray": ["Machine Learning", "Artificial Intelligence(AI)", "Data Science"],
+        "logo": "/img/logo/codecademy.png",
+        "link": "https://www.codecademy.com/profiles/AWills987/certificates/5e15fa478b1c550011ec7046"
+    },
+    {
         "id": "6",
         "title": "Learn React Course",
         "schoolName": "Codecademy",
