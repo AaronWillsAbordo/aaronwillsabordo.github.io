@@ -1,11 +1,42 @@
 export const data = [
+    
+    {
+        id: 'scalableos',
+        company: 'ScalableOS Corporation',
+        source: `${process.env.PUBLIC_URL}/img/logo/logo-scalableos.jfif`,
+        roles: [
+            {
+                title: 'AI Developer',
+                date: 'Oct 2025 - Feb 2026',
+                descriptions: [
+                    `Built an <strong>AI-powered payment prediction system</strong> to identify customer 
+                    payment behavior (pay vs. non-pay, insurance vs. cash), enabling the client to prioritize high-risk 
+                    accounts and reducing manual analysis time by approximately 90%.`,
+                    
+                    `Designed and implemented an <strong>automated email categorization AI</strong> that classified 
+                    incoming emails and assigned system flags, eliminating unnecessary email reviews and increasing client 
+                    productivity by approximately 80%.`,
+
+                    `Developed an <strong>LLM-based chatbot</strong> and integrating it into internal workflows to support 
+                    operational and informational use cases.`,
+
+                    `Collaborated daily with <strong>international clients</strong> through requirements discussions, 
+                    progress updates, and iterative model feedback sessions.`,
+
+                    `Owned the end-to-end AI development lifecycle, including data preprocessing, model training, 
+                    evaluation, and continuous model improvement.`
+                ],
+                skills: ['AI Model Development', 'Data Analysis', 'Data Preprocessing', 'Model Training', 'OpenWebUI', 'LightGBM', 'PyTorch', 'Linux Server']
+            }
+        ]
+    },
     {
         id: 'nimbyx',
         company: 'Nimbyx Philippines Inc.',
         source: `${process.env.PUBLIC_URL}/img/logo/logo-nimbyx.jpg`,
         roles: [{
                 title: 'Software Engineer 1',
-                date: 'Feb 2023 - Present',
+                date: 'Feb 2023 - Nov 2025',
                 descriptions: [
                     `<strong>Designed</strong>, <strong>implemented</strong>, and <strong>automated</strong> various 
                     services and products, ensuring efficient development processes and streamlined deployments.`,
@@ -49,25 +80,6 @@ export const data = [
                 skills: ['3D Visualization', '3D Mesh Manipulation', 'Python', 'Data Analysis', 'FastAPI', 'ThreeJS']
             }
         ] 
-    },
-    {
-        id: 'vishay',
-        company: 'Vishay Philippines Inc.',
-        source: `${process.env.PUBLIC_URL}/img/logo/logo-vishay.png`,
-        roles: [
-            {
-                title: 'OJT Failure Analysis Modules Quality',
-                date: 'Feb 2019 - Dec 2019',
-                descriptions: [
-                    `<strong>Performed comprehensive failure analysis of 
-                    semiconductor devices</strong> utilizing various techniques.`,
-
-                    `<strong>Identified root causes of failures</strong>, leading to 
-                    significant improvements in device yield and product quality.` 
-                ],
-                skills: ['Failure Analysis']
-            }
-        ]
     }
 ]
 

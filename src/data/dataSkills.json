@@ -12,13 +12,13 @@
         "name": "Pandas",
         "path": "/img/logo/pandas.svg"
     },{
+        "id": "lightgbm",
+        "name": "LightGBM",
+        "path": "/img/logo/lightgbm.png"
+    },{
         "id": "fastapi",
         "name": "FastAPI",
         "path": "/img/logo/fastapi.svg"
-    },{
-        "id": "sql",
-        "name": "SQL",
-        "path": "/img/logo/azure sql.svg"
     },{
         "id": "dotnet",
         "name": ".Net Framework",
@@ -40,6 +40,10 @@
         "name": "Google Cloud",
         "path": "/img/logo/devicon_googlecloud.svg"
     },{
+        "id": "sql",
+        "name": "SQL",
+        "path": "/img/logo/azure sql.svg"
+    },{
         "id": "azure",
         "name": "Azure",
         "path": "/img/logo/devicon_azure.svg"
@@ -48,9 +52,9 @@
         "name": "Jira",
         "path": "/img/logo/jira.svg"
     },{
-        "id": "figma",
-        "name": "Figma",
-        "path": "/img/logo/devicon_figma.svg"
+        "id": "linux",
+        "name": "Linuc Server",
+        "path": "/img/logo/linux.png"
     },{
         "id": "git",
         "name": "Git",

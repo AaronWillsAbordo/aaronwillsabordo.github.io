@@ -13,7 +13,7 @@
 
 .skills-row-last {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(5, auto);
     grid-gap: 50px 100px; 
     height: 150px;
 }
