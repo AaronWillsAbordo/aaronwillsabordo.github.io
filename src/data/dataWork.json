@@ -1,6 +1,24 @@
 {
     "work": [
         {
+            "id": "resume_analyzer",
+            "title": "Resume Analyzer",
+            "description": [
+                "Analyze resumes with AI.\n",
+
+                "ResumeAnalyzer is an LLM-powered tool that evaluates and analyzes resumes using pretrained language models. ",
+                "It can run either fully offline with a local model or online with larger hosted models for better accuracy.\n",
+
+                "The project supports models from Ollama and OpenAI gpt-oss, allowing flexible deployment depending on your hardware and use case."
+            ],
+            "skills": ["AI Development", "Python", "LLMs", "Ollama's Llama3", "OpenAI's gpt-oss", "HuggingFace Transformers", "gradio", "PDF parsing" ],
+            "imgs": [
+                "/img/work/resume_analyzer/resume_analyzer_sample.gif"
+            ],
+            "link": "https://github.com/AaronWillsAbordo/ResumeAnalyzer",
+            "category": "project"
+        },
+        {
             "id": "untitled game",
             "title": "untitled game",
             "description": [
@@ -23,6 +41,6 @@
             ],
             "link": "https://github.com/AaronWillsAbordo/untitledgame",
             "category": "project"
-        }   
+        }
 ]
 }

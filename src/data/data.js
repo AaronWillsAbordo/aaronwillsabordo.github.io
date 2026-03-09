@@ -86,12 +86,14 @@ export const data = [
 export const dataProfile = [
     {
         profile: [`
-            I’m a <strong>Software Engineer</strong> with expertise in <strong>Python</strong>
-            , <strong>.NET</strong>, <strong>React</strong>, and <strong>data analytics</strong>, 
-            dedicated to building efficient and scalable solutions. 
-            I’m also passionate about creating impactful software 
-            and exploring <strong>AI technologies</strong>. Eager to contribute to a challenging 
-            and collaborative environment where I can continuously learn and grow.
+            <strong>Artificial Intelligence / Machine Learning Engineer</strong> specializing in 
+            <strong>building intelligent systems that solve real-world business problems</strong>.
+
+            I develop predictive models, LLM-powered applications, and automation tools using modern technologies, 
+            transforming complex data and workflows into scalable AI-powered solutions.
+
+            I’m passionate about creating impactful software and continuously exploring new <strong>AI technologies</strong>. 
+            I enjoy working in collaborative environments where I can contribute, learn, and grow.
         `]
     }
 ]
@@ -99,23 +101,18 @@ export const dataProfile = [
 export const dataAbout = [
     {
         about: [`
-            I am a goal-oriented, adaptable, and highly committed professional with a strong background in 
-            software development, machine learning, and web technologies. With hands-on experience 
-            in <strong>AI-powered 3D mesh manipulation</strong>, <strong>full-stack 
-            development</strong>, and <strong>software automation</strong>, I thrive on solving complex 
-            problems and continuously expanding my technical skillset.
+            I am a <strong>goal-oriented, adaptable, and highly committed professional</strong> with a strong background in artificial intelligence, 
+            software development, and web technologies. I enjoy solving complex problems and building practical solutions that create real-world impact.
             <br />
             <br />
-            My expertise includes building scalable, responsive web applications, automating 
-            workflows, and developing neural networks using Python. I enjoy working with diverse tools 
-            and technologies such as React, PyTorch, and cloud-based platforms, and I am always exploring 
-            new areas to further enhance my capabilities.
+            My experience includes developing <strong>AI models</strong> and <strong>solutions</strong>, such as <strong>AI-powered 3D mesh automation software</strong>, 
+            building intelligent systems that solve real-world business challenges. I have also built 
+            <strong>full-stack web applications</strong> and <strong>automation systems</strong> that streamline complex workflows and improve operational efficiency. 
+            I frequently work with technologies such as Python, React, PyTorch, and cloud platforms to design scalable, reliable, and efficient solutions.
             <br />
             <br />
-            Throughout my journey, I have cultivated a passion for delivering impactful solutions, 
-            collaborating with talented teams, and driving innovation. I am committed to applying my 
-            knowledge to create meaningful results and continuously push the boundaries of what’s 
-            possible in the tech industry.
+            I’m passionate about continuously learning and exploring new technologies, particularly in AI and machine learning. 
+            I enjoy collaborating with teams, turning ideas into working systems, and pushing myself to grow as an engineer while delivering meaningful results.
             `]
     }
 ]
@@ -129,3 +126,22 @@ export const dataInfo = [
         copy_icon: `${process.env.PUBLIC_URL}/img/icon/copy.svg`
     }
 ]
+
+
+            // I am a goal-oriented, adaptable, and highly committed professional with a strong background in 
+            // software development, machine learning, and web technologies. With hands-on experience 
+            // in <strong>AI-powered 3D mesh manipulation</strong>, <strong>full-stack 
+            // development</strong>, and <strong>software automation</strong>, I thrive on solving complex 
+            // problems and continuously expanding my technical skillset.
+            // <br />
+            // <br />
+            // My expertise includes building scalable, responsive web applications, automating 
+            // workflows, and developing neural networks using Python. I enjoy working with diverse tools 
+            // and technologies such as React, PyTorch, and cloud-based platforms, and I am always exploring 
+            // new areas to further enhance my capabilities.
+            // <br />
+            // <br />
+            // Throughout my journey, I have cultivated a passion for delivering impactful solutions, 
+            // collaborating with talented teams, and driving innovation. I am committed to applying my 
+            // knowledge to create meaningful results and continuously push the boundaries of what’s 
+            // possible in the tech industry.

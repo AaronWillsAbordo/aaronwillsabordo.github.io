@@ -20,10 +20,28 @@ const Work = forwardRef((props, ref) => {
                     {dataWork.work.map((project) => (
                         <div key={project.id} className="work-container" style={{flexDirection:'column', width: '100%', padding: '10px', maxWidth: '370px'}}>
                             <div className="work-column-left" style={{width:'100%', height: '100%', marginBottom: '20px'}}>
-                                {project.imgs && project.imgs.length > 0 ? (
+                                {project.imgs && project.imgs.length > 1 ? (
                                     <EmblaCarousel slides={project.imgs} options={{loop: true}} isMobile={props.isMobile} />
                                 ) : (
-                                    <p>No images available for this project.</p>
+                                    project.imgs && project.imgs.length === 1 ? (
+                                        project.imgs[0].includes('.gif') ? (
+                                            <img
+                                                src={project.imgs[0]}
+                                                alt="project preview"
+                                                style={{ 
+                                                    width: "90%",
+                                                    height: "90%",
+                                                    objectFit: "contain",
+                                                    display: "block",
+                                                    margin: "auto"
+                                                }}
+                                            />
+                                        ) : (
+                                            <img src={project.imgs[0]} alt={project.title} />
+                                        )
+                                    ) : (
+                                        <p>No images available for this project.</p>
+                                    )
                                 )}
                             </div>
                             <div className="work-column-right" style={{width: '100%'}}>
@@ -53,10 +71,28 @@ const Work = forwardRef((props, ref) => {
                     {dataWork.work.map((project) => (
                         <div key={project.id} className="work-container">
                             <div className="work-column-left">
-                                {project.imgs && project.imgs.length > 0 ? (
+                                {project.imgs && project.imgs.length > 1 ? (
                                     <EmblaCarousel slides={project.imgs} options={{loop: true}} isMobile={props.isMobile} />
                                 ) : (
-                                    <p>No images available for this project.</p>
+                                    project.imgs && project.imgs.length === 1 ? (
+                                        project.imgs[0].includes('.gif') ? (
+                                            <img
+                                                src={project.imgs[0]}
+                                                alt="project preview"
+                                                style={{ 
+                                                    width: "90%",
+                                                    height: "90%",
+                                                    objectFit: "contain",
+                                                    display: "block",
+                                                    margin: "auto"
+                                                }}
+                                            />
+                                        ) : (
+                                            <img src={project.imgs[0]} alt={project.title} />
+                                        )
+                                    ) : (
+                                        <p>No images available for this project.</p>
+                                    )
                                 )}
                             </div>
                             <div className="work-column-right">
