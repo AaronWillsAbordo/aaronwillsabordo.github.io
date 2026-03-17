@@ -1,4 +1,4 @@
-import React, { useState, useEffect, forwardRef } from 'react';
+import { forwardRef } from 'react';
 import dataWork from '../data/dataWork.json';
 import { dataImgs } from '../data/dataImgs';
 import ReactMarkdown from 'react-markdown';

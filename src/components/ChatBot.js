@@ -5,9 +5,9 @@ import WorkInProgress from './WorkInProgress.js';
 export default function ChatBot ( props ) {
     const [isOpen, setIsOpen] = useState(false);
     const [message, setMessage] = useState('');
-    const [messages, setMessages] = useState([]);
-    const [response, setResponse] = useState('');
-    const [responses, setResponses] = useState([]);
+    // const [messages, setMessages] = useState([]);
+    // const [response, setResponse] = useState('');
+    // const [responses, setResponses] = useState([]);
     const chatRef = useRef(null);
     const chatWindowRef = useRef(null);
     const [history, setHistory] = useState([]);
@@ -16,9 +16,9 @@ export default function ChatBot ( props ) {
         setIsOpen(prev => !prev);
     };
 
-    const handleInputChange = (e) => {
-        setMessage(e.target.value);
-    };
+    // const handleInputChange = (e) => {
+    //     setMessage(e.target.value);
+    // };
 
     useEffect(() => {
         if (chatRef.current) {
@@ -49,35 +49,35 @@ export default function ChatBot ( props ) {
         };
     }, [isOpen]);
 
-    const handleSendMessage = async () => {
-    if (!message.trim()) return;
-        // Store user message
-        setHistory(prev => [...prev, { messenger: 'user', text: message }]);
-        setMessages(prev => [...prev, message]); // Optional, for separate tracking
+    // const handleSendMessage = async () => {
+    // if (!message.trim()) return;
+    //     // Store user message
+    //     setHistory(prev => [...prev, { messenger: 'user', text: message }]);
+    //     setMessages(prev => [...prev, message]); // Optional, for separate tracking
 
-        try {
-            const res = await fetch('http://127.0.0.1:8000/chat', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ message })
-            });
+    //     try {
+    //         const res = await fetch('http://127.0.0.1:8000/chat', {
+    //             method: 'POST',
+    //             headers: {
+    //                 'Content-Type': 'application/json'
+    //             },
+    //             body: JSON.stringify({ message })
+    //         });
 
-            const data = await res.json();
-            const botResponse = data.response || 'No response';
+    //         const data = await res.json();
+    //         const botResponse = data.response || 'No response';
 
-            // Store bot response
-            setHistory(prev => [...prev, { messenger: 'bot', text: botResponse }]);
-            setResponses(prev => [...prev, botResponse]); // Optional, for separate tracking
-        } catch (error) {
-            console.error('Error talking to chatbot:', error);
-            const errorMsg = 'Error connecting to chatbot';
-            setHistory(prev => [...prev, { messenger: 'bot', text: errorMsg }]);
-        }
+    //         // Store bot response
+    //         setHistory(prev => [...prev, { messenger: 'bot', text: botResponse }]);
+    //         setResponses(prev => [...prev, botResponse]); // Optional, for separate tracking
+    //     } catch (error) {
+    //         console.error('Error talking to chatbot:', error);
+    //         const errorMsg = 'Error connecting to chatbot';
+    //         setHistory(prev => [...prev, { messenger: 'bot', text: errorMsg }]);
+    //     }
 
-        setMessage(''); // Clear input
-    };
+    //     setMessage(''); // Clear input
+    // };
 
     return (
         <div className={`chatbot ${isOpen ? 'open' : ''}`}>
