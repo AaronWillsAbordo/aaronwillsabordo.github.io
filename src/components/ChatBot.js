@@ -4,13 +4,13 @@ import WorkInProgress from './WorkInProgress.js';
 
 export default function ChatBot ( props ) {
     const [isOpen, setIsOpen] = useState(false);
-    const [message, setMessage] = useState('');
+    // const [message, setMessage] = useState('');
     // const [messages, setMessages] = useState([]);
     // const [response, setResponse] = useState('');
     // const [responses, setResponses] = useState([]);
     const chatRef = useRef(null);
     const chatWindowRef = useRef(null);
-    const [history, setHistory] = useState([]);
+    // const [history, setHistory] = useState([]);
 
     const toggleChat = () => {
         setIsOpen(prev => !prev);
@@ -20,11 +20,11 @@ export default function ChatBot ( props ) {
     //     setMessage(e.target.value);
     // };
 
-    useEffect(() => {
-        if (chatRef.current) {
-            chatRef.current.scrollTop = chatRef.current.scrollHeight;
-        }
-    }, [history]);
+    // useEffect(() => {
+    //     if (chatRef.current) {
+    //         chatRef.current.scrollTop = chatRef.current.scrollHeight;
+    //     }
+    // }, [history]);
 
     
     useEffect(() => {
