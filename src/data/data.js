@@ -1,5 +1,4 @@
-export const data = [
-    
+export const data = [  
     {
         id: 'scalableos',
         company: 'ScalableOS Corporation',
@@ -28,7 +27,13 @@ export const data = [
                     `Owned the end-to-end AI development lifecycle, including data preprocessing, model training, 
                     evaluation, and continuous model improvement.`
                 ],
-                skills: ['AI Model Development', 'Data Analysis', 'Data Preprocessing', 'Model Training', 'OpenWebUI', 'LightGBM', 'PyTorch', 'Linux Server']
+                skills: ['AI Model Development', 'Data Analysis', 'Data Preprocessing', 'Model Training', 'OpenWebUI', 'LightGBM', 'PyTorch', 'Linux Server'],
+                highlights: [
+                    "Built ML models for multi-class classification to predict behavioral outcomes",
+                    "Developed AI-powered communication categorization (80% productivity improvement)",
+                    "Built an internal AI chatbot platform with secure LLM access",
+                    "Collaborated with international clients daily"
+                ],
             }
         ]
     },
@@ -64,6 +69,12 @@ export const data = [
                     'Jira', 'Google Cloud IAM', 'Robotic Process Automation (RPA)', 'UiPath', 'Azure Service Bus',
                     'Agile Methodologies', 'Software Development'
                 ],
+                highlights: [
+                    "Designed, implemented, and automated various services and products",
+                    "Built automated workflows using Python, .NET, and UiPath",
+                    "Developed unit and end-to-end tests with Cypress",
+                    "Contributed to full-stack internal web product development"
+                ]
             },
             {
                 title: 'Machine Learning Engineer 1',
@@ -81,7 +92,12 @@ export const data = [
                     `Designed and implemented an interactive frontend using <strong>Three.js</strong>, enabling 
                     users to manually adjust and manipulate .stl files directly within the application.`
                 ],
-                skills: ['3D Visualization', '3D Mesh Manipulation', 'Python', 'Data Analysis', 'FastAPI', 'ThreeJS']
+                skills: ['3D Visualization', '3D Mesh Manipulation', 'Python', 'Data Analysis', 'FastAPI', 'ThreeJS'],
+                highlights: [
+                    "Built AI-powered 3D design automation (reduced manual work by ~80%)",
+                    "Used PyVista, Vedo, Trimesh, MeshLab for 3D mesh manipulation",
+                    "Created interactive 3D frontend with Three.js"
+                ]
             }
         ] 
     }
@@ -90,15 +106,22 @@ export const data = [
 export const dataProfile = [
     {
         profile: [`
-            <strong>Artificial Intelligence / Machine Learning Engineer</strong> specializing in 
-            <strong>building intelligent systems that solve real-world business problems</strong>.
+            <strong>Software Engineer</strong> specializing in developing 
+            <strong>Artificial Intelligence and Machine Learning</strong> solutions,
+            building intelligent systems that solve real-world business problems.
 
             I develop predictive models, LLM-powered applications, and automation tools using modern technologies, 
             transforming complex data and workflows into scalable AI-powered solutions.
 
-            I’m passionate about creating impactful software and continuously exploring new <strong>AI technologies</strong>. 
+            I’m passionate about creating impactful software and continuously exploring new <strong>technologies</strong>. 
             I enjoy working in collaborative environments where I can contribute, learn, and grow.
-        `]
+        `],
+        shortProfile: 
+            `<strong>Software Engineer</strong> specializing in developing 
+            <strong>Artificial Intelligence and Machine Learning</strong> solutions,
+            building intelligent systems that solve real-world business problems. 
+            He develops predictive models, LLM-powered applications, 
+            and automation tools using modern technologies.`,
     }
 ]
 
@@ -117,17 +140,28 @@ export const dataAbout = [
             <br />
             I’m passionate about continuously learning and exploring new technologies, particularly in AI and machine learning. 
             I enjoy collaborating with teams, turning ideas into working systems, and pushing myself to grow as an engineer while delivering meaningful results.
-            `]
+            `],
+        shortAbout: 
+            `Aaron is a goal-oriented, adaptable, and highly committed professional with a strong background in AI, software development, and web technologies. 
+            His experience includes AI-powered 3D mesh automation, full-stack web applications, and automation systems. He works with Python, React, PyTorch, 
+            and cloud platforms.`
     }
 ]
 
 export const dataInfo = [
     {
+        name: "Aaron Wills R. Abordo",
+        title: "Software Engineer - AI / Machine Learning",
         email: "aaronwills.abordo@gmail.com",
-        number: "+63 995 752 5916",
+        number: "(+63) 995 752 5916",
+        github: "https://github.com/AaronWillsAbordo",
         email_icon: `${process.env.PUBLIC_URL}/img/icon/email.svg`,
         phone_icon: `${process.env.PUBLIC_URL}/img/icon/phone.svg`,
-        copy_icon: `${process.env.PUBLIC_URL}/img/icon/copy.svg`
+        copy_icon: `${process.env.PUBLIC_URL}/img/icon/copy.svg`,
+        passion: 
+            `Aaron is passionate about creating impactful software and continuously exploring new AI technologies. He enjoys working in collaborative 
+            environments where he can contribute, learn, and grow.`,
+        
     }
 ]
 
