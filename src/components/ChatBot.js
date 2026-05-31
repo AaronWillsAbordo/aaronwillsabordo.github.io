@@ -1,32 +1,45 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './ChatBot.css';
-import WorkInProgress from './WorkInProgress.js';
+import { generateResponse, getGreeting } from '../services/chatbotEngine';
 
-export default function ChatBot ( props ) {
+export default function ChatBot(props) {
     const [isOpen, setIsOpen] = useState(false);
-    // const [message, setMessage] = useState('');
-    // const [messages, setMessages] = useState([]);
-    // const [response, setResponse] = useState('');
-    // const [responses, setResponses] = useState([]);
+    const [message, setMessage] = useState('');
+    const [history, setHistory] = useState([]);
+    const [isTyping, setIsTyping] = useState(false);
     const chatRef = useRef(null);
     const chatWindowRef = useRef(null);
-    // const [history, setHistory] = useState([]);
+    const inputRef = useRef(null);
+    const hasGreeted = useRef(false);
 
     const toggleChat = () => {
         setIsOpen(prev => !prev);
     };
 
-    // const handleInputChange = (e) => {
-    //     setMessage(e.target.value);
-    // };
+    const handleInputChange = (e) => {
+        setMessage(e.target.value);
+    };
 
-    // useEffect(() => {
-    //     if (chatRef.current) {
-    //         chatRef.current.scrollTop = chatRef.current.scrollHeight;
-    //     }
-    // }, [history]);
+    useEffect(() => {
+        if (chatRef.current) {
+            chatRef.current.scrollTop = chatRef.current.scrollHeight;
+        }
+    }, [history, isTyping]);
 
-    
+    useEffect(() => {
+        if (isOpen && !hasGreeted.current) {
+            hasGreeted.current = true;
+            setIsTyping(true);
+            setTimeout(() => {
+                setHistory([{ messenger: 'bot', text: getGreeting() }]);
+                setIsTyping(false);
+            }, 600);
+        }
+        if (isOpen && inputRef.current) {
+            setTimeout(() => inputRef.current.focus(), 100);
+        }
+    }, [isOpen]);
+
     useEffect(() => {
         const handleClickOutside = (e) => {
             if (
@@ -49,77 +62,75 @@ export default function ChatBot ( props ) {
         };
     }, [isOpen]);
 
-    // const handleSendMessage = async () => {
-    // if (!message.trim()) return;
-    //     // Store user message
-    //     setHistory(prev => [...prev, { messenger: 'user', text: message }]);
-    //     setMessages(prev => [...prev, message]); // Optional, for separate tracking
+    const handleSendMessage = () => {
+        if (!message.trim()) return;
 
-    //     try {
-    //         const res = await fetch('http://127.0.0.1:8000/chat', {
-    //             method: 'POST',
-    //             headers: {
-    //                 'Content-Type': 'application/json'
-    //             },
-    //             body: JSON.stringify({ message })
-    //         });
+        const userMsg = message.trim();
 
-    //         const data = await res.json();
-    //         const botResponse = data.response || 'No response';
+        setHistory(prev => [...prev, { messenger: 'user', text: userMsg }]);
+        setMessage('');
 
-    //         // Store bot response
-    //         setHistory(prev => [...prev, { messenger: 'bot', text: botResponse }]);
-    //         setResponses(prev => [...prev, botResponse]); // Optional, for separate tracking
-    //     } catch (error) {
-    //         console.error('Error talking to chatbot:', error);
-    //         const errorMsg = 'Error connecting to chatbot';
-    //         setHistory(prev => [...prev, { messenger: 'bot', text: errorMsg }]);
-    //     }
-
-    //     setMessage(''); // Clear input
-    // };
+        setIsTyping(true);
+        setTimeout(() => {
+            const botResponse = generateResponse(userMsg);
+            setHistory(prev => [...prev, { messenger: 'bot', text: botResponse }]);
+            setIsTyping(false);
+        }, 400 + Math.random() * 400);
+    };
 
     return (
         <div className={`chatbot ${isOpen ? 'open' : ''}`}>
-            <button className="chatbot-toggle" onClick={toggleChat}>
+            <button className="chatbot-toggle" onClick={toggleChat} aria-label="Toggle chat">
                 <img
                     src={`${process.env.PUBLIC_URL}/img/icon/chat-bot.png`}
                     alt="Chat"
                     className="chatbot-icon"
                 />
-                {/* Chat */}
             </button>
             {isOpen && (
-                <div className="chatbot-window" ref={chatWindowRef} >
-                    <WorkInProgress />
-                    {/* <div className="chatbot-messages" ref={chatRef}>
+                <div className="chatbot-window" ref={chatWindowRef}>
+                    <div className="chatbot-header">
+                        <span className="chatbot-header-title">💬 Portfolio Assistant</span>
+                        <button className="chatbot-close" onClick={() => setIsOpen(false)} aria-label="Close chat">✕</button>
+                    </div>
+                    <div className="chatbot-messages" ref={chatRef}>
                         {history.map((msg, index) => (
                             <div key={index} className={`message ${msg.messenger}`}>
-                                {msg.text}
+                                {msg.messenger === 'bot' && <span className="message-avatar">🤖</span>}
+                                {msg.messenger === 'bot' ? (
+                                    <span
+                                        className="message-text"
+                                        dangerouslySetInnerHTML={{ __html: msg.text.replace(/\n/g, '<br/>') }}
+                                    />
+                                ) : (
+                                    <span className="message-text">{msg.text}</span>
+                                )}
                             </div>
                         ))}
+                        {isTyping && (
+                            <div className="message bot">
+                                <span className="message-avatar">🤖</span>
+                                <span className="message-text typing-indicator">
+                                    <span className="dot"></span>
+                                    <span className="dot"></span>
+                                    <span className="dot"></span>
+                                </span>
+                            </div>
+                        )}
                     </div>
                     <div className="chatbot-input-area">
                         <input
+                            ref={inputRef}
                             type="text"
                             value={message}
                             onChange={handleInputChange}
                             onKeyDown={(e) => e.key === 'Enter' && handleSendMessage()}
                             placeholder="Type a message..."
                         />
-                        <button onClick={handleSendMessage}>Send</button>
-                    </div> */}
+                        <button onClick={handleSendMessage} disabled={!message.trim()}>Send</button>
+                    </div>
                 </div>
             )}
         </div>
     );
-
-//   return (
-//     <>
-//     {/* props.isMobile ? (
-
-//     ) : (
-
-//     ) */}
-
 }
