@@ -9,16 +9,18 @@ export const data = [
                 title: 'AI Developer',
                 date: 'Oct 2025 - Feb 2026',
                 descriptions: [
-                    `Built an <strong>AI-powered payment prediction system</strong> to identify customer 
-                    payment behavior (pay vs. non-pay, insurance vs. cash), enabling the client to prioritize high-risk 
-                    accounts and reducing manual analysis time by approximately 90%.`,
+                    `Developed a machine learning solution that used multi-class classification to <strong>predict 
+                    behavioral outcomes and support business prioritization</strong>. Built a web interface and exposed the 
+                    model through an API for easier access and potential system integration. The solution reduced manual review 
+                    by approximately 95% by minimizing manual analysis per record.`,
                     
-                    `Designed and implemented an <strong>automated email categorization AI</strong> that classified 
-                    incoming emails and assigned system flags, eliminating unnecessary email reviews and increasing client 
-                    productivity by approximately 80%.`,
+                    `Developed an AI-powered communication categorization solution that automatically classified <strong>incoming 
+                    records and assigned relevant system indicators</strong>. The solution reduced unnecessary manual reviews 
+                    and improved productivity by approximately 80%.`,
 
-                    `Developed an <strong>LLM-based chatbot</strong> and integrating it into internal workflows to support 
-                    operational and informational use cases.`,
+                    `Developed an internal AI chatbot platform that provided <strong>secure, controlled access to multiple LLMs</strong> 
+                    for team-specific use cases. The solution helped keep company data within the internal environment while 
+                    improving knowledge access, productivity, and safe AI adoption across teams.`,
 
                     `Collaborated daily with <strong>international clients</strong> through requirements discussions, 
                     progress updates, and iterative model feedback sessions.`,
@@ -67,8 +69,10 @@ export const data = [
                 title: 'Machine Learning Engineer 1',
                 date: 'Jul 2023 - Jun 2024',
                 descriptions: [
-                    `Developed an AI-powered solution to automate and streamline 3D mesh manipulation, <strong>reducing 
-                    manual labor</strong> and <strong>improving workflow efficiency</strong>.`,
+                    `Collaborated on developing an AI-powered system that automated the generation of completed <strong>3D designs 
+                    with minimal human intervention</strong>. The solution used supervised learning and was periodically retrained 
+                    to improve output quality and consistency. It reduced manual work by approximately 80%, allowing the 
+                    design team to focus mainly on review and fine-tuning instead of full manual creation.`,
 
                     `Leveraged libraries such as <strong>PyVista</strong>, <strong>Vedo</strong>, <strong>Trimesh</strong>, 
                     and <strong>MeshLab</strong> to create a robust program capable of precisely manipulating 
