@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import dataSkills from '../data/dataSkills.json'; 
+import dataSkills from '../data/dataSkills.json';
 import './Skills.css';
 
 const Skills = forwardRef((props, ref) => {
@@ -12,7 +12,7 @@ const Skills = forwardRef((props, ref) => {
             if (index % 3 === 0) {
                 acc.push([]);
             }
-    
+
             acc[acc.length - 1].push(skill);
             return acc;
         }, []).map((group, groupIndex) => {
@@ -20,10 +20,10 @@ const Skills = forwardRef((props, ref) => {
                 gridTemplateColumns: group.length === 1
                     ? '1fr'
                     : group.length === 2
-                    ? 'repeat(2, 35%)'
-                    : 'repeat(3, minmax(25%, 1fr))',
+                        ? 'repeat(2, 35%)'
+                        : 'repeat(3, minmax(25%, 1fr))',
             };
-    
+
             return (
                 <div className="skills-mobile" key={groupIndex} style={gridStyle}>
                     {group.map((skill, index) => (
@@ -42,15 +42,15 @@ const Skills = forwardRef((props, ref) => {
             <title>Skills</title>
             <h2>The skills, tools, and technologies I am good at:</h2>
 
-            { props.isMobile ? 
+            {props.isMobile ?
                 (
                     renderSkillsMobile(dataSkills.skills)
                 ) : (
                     <div className="skills-grid">
                         {[firstRow, secondRow, thirdRow].map((row, index) => (
-                            <div 
-                                key={index} 
-                                className={`skills-row${index === 2 ? '-last' : ''}`} 
+                            <div
+                                key={index}
+                                className={`skills-row${index === 2 ? '-last' : ''}`}
                                 style={props.isMobile ? { gridGap: '10px 10px' } : undefined}
                             >
                                 {row.map((skill) => (
